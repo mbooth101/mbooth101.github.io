@@ -1,5 +1,6 @@
 Title: Fedora 20 Released
-Date: 2013-12-17
+Date: 2013-12-17 17:00
+Modified: 2013-12-17 17:00
 Category: Misc
 Tags: fedora
 Slug: fedora-20-released
