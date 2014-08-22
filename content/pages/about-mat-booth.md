@@ -7,6 +7,6 @@ Summary: Mat Booth is a software engineer on the Red Hat Eclipse Team.
 
 ![Hackergotchi]({filename}/images/hackergotchi-mbooth.png)
 
-Mat Booth is a software engineer on the Red Hat Eclipse Team. He spends most of his time hacking on Eclipse, Fedora and miscellaneous other free and open source projects.
+I am a software engineer on the Red Hat Eclipse Team. I spend most of my time hacking on Eclipse, Fedora and miscellaneous other free and open source projects.
 
-You may contact me directly via email ([mbooth&#64;fedoraproject.org](mailto:mbooth@fedoraproject.org)) or IRC (mbooth on Freenode channels [#fedora-devel](irc://irc.freenode.net/fedora-devel), [#fedora-java](irc://irc.freenode.net/fedora-java) or [#fedora-uk](irc://irc.freenode.net/fedora-uk)).
+You may contact me directly via email ([mbooth&#64;fedoraproject.org](mailto:mbooth@fedoraproject.org)) or on IRC (mbooth on Freenode channels [#fedora-devel](irc://irc.freenode.net/fedora-devel), [#fedora-java](irc://irc.freenode.net/fedora-java) or [#fedora-uk](irc://irc.freenode.net/fedora-uk)). I can also be reached on Twitter at [@_mbooth](https://twitter.com/_mbooth).
