@@ -2,12 +2,11 @@
 
 This repository contains the raw content and makefiles for publishing the blog using the [Pelican](http://blog.getpelican.com/) static site generator tool.
 
-## Initial Setup
+## Initial Setup on Fedora
 
-    $ sudo yum install python-pelican
-    $ git clone git@github.com:mbooth101/blog-o-matic.git
+    $ sudo dnf install python3-pelican
+    $ git clone ssh://mbooth@git.darkpeak.org/blog-o-matic.git
     $ cd blog-o-matic
-    $ git clone git@github.com:mbooth101/mbooth101.github.io.git output
 
 ## Publishing
 
@@ -18,18 +17,11 @@ Create articles in the __content__ directory, pages in the __content/pages__ dir
 
 Commit everything when done:
 
-    $ git commit -m "Commit the new content"
-    $ git push
-
-Then it can be published it to the live blog:
-
     $ make publish
-    $ cd output
-    $ git commit -m "Commit the generated site"
+    $ git commit -am "Commit the new content"
     $ git push
-    $ cd ..
 
-Find the new content on the live blog: http://mbooth101.github.io/
+Find the new content on the live blog: http://blog.matbooth.co.uk/
 
 ## License
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python2
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
@@ -10,9 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = '//mbooth101.github.io'
-FEED_DOMAIN = SITEURL
+SITEURL = '//blog.matbooth.co.uk'
 RELATIVE_URLS = False
 
-DELETE_OUTPUT_DIRECTORY = False
-
+DELETE_OUTPUT_DIRECTORY = True

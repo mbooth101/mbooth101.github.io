@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Benefits of Linux Distro Packaging</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="./">Mat's Blog-O-Matic  <strong>A Linux and coding blog.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="./pages/about-mat-booth.html">About Mat Booth</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./06-benefits-of-distro-packaging.html" rel="bookmark"
+           title="Permalink to Benefits of Linux Distro Packaging">Benefits of Linux Distro Packaging</a></h1>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="FOSS_mbooth">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-12-09T11:00:00+00:00">
+                Published: Wed 09 December 2015
+        </abbr>
+		<br />
+        <abbr class="modified" title="2015-12-09T11:00:00+00:00">
+                Updated: Wed 09 December 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/mat-booth.html">Mat Booth</a>
+        </address>
+<p>In <a href="./category/misc.html">Misc</a>.</p>
+<p>tags: <a href="./tag/fedora.html">fedora</a> <a href="./tag/eclipse.html">eclipse</a> </p>
+</footer><!-- /.post-info -->      <p>Recently, I have been adding a lot of patches to the version of Eclipse (Mars.1) that is packaged in Fedora Linux. This post attempts to explain why.</p>
+<p>In my opinion, one of the chief benefits to packaging your software for a Linux distribution is the ability of the distribution to carry patches. These patches generally come in two flavours:</p>
+<p><strong>1. Bug-fixes back-ported from the upstream project.</strong></p>
+<p>This is useful when the upstream project fixes a bug that affects their users, but have not yet released a new version of their software. Some projects have very long or infrequent release cycles, so the Linux distro may want to cherry-pick fixes and carry the patches until the the upstream project releases a fixed version, at which time the patches can be dropped.</p>
+<p><strong>2. Bug-fixes that have yet to be merged into the upstream project.</strong></p>
+<p>This is useful when the Linux distro fixes a bug that affects their users that the upstream project does not yet know about. Maybe it was missed upstream because they develop mostly on Mac or Windows, or maybe the bug only manifests on this particular distro. Either way, the Linux distro can carry the patch and work with the upstream project to get it merged. Once again, when upstream releases a version containing a fix, the distro can drop the patch.</p>
+<p><strong>In both cases, the end result is a better user experience for your software on Linux.</strong></p>
+<p>Which brings me back to Eclipse... Since GTK was updated to 3.18 on Fedora there have been some extremely visible rendering bugs in various parts of the Eclipse IDE on Fedora. Most of these bugs have been fixed upstream in Eclipse's master branch, but it's going to be a long time until Eclipse does another release that includes these fixes, even if they are chosen to be cherry-picked for the Mars.2 release. In Fedora, we chose to back-port them to current release Mars.1.</p>
+<p>The following screenshot shows the difference it has made to the background colours in the workspace chooser dialog. Eclipse downloaded from eclipse.org is on the left, Eclipse from the Fedora package is on the right:</p>
+<p><img alt="Workspace Chooser" src="./images/workspace_chooser_colors.png"></p>
+<p>You should see the same difference in other dialogs too, such as wizard dialogs and the EGit commit dialog.</p>
+<p>The next screenshot shows the difference it has made to the form editor, where text labels used to be positioned incorrectly or oddly truncated. Again, Eclipse downloaded from eclipse.org is on the left, Eclipse from the Fedora package is on the right:</p>
+<p><img alt="Form Editor" src="./images/form_editor_text.png"></p>
+<p>Many thanks to <a href="https://twitter.com/yyzericwill">Eric Williams</a> for getting these highly visible SWT/GTK bugs fixed and committed upstream at eclipse.org and thus allowing me to back-port them to Fedora. I'm sure our users will appreciate it!</p>
+<p>If you are an Eclipse on Fedora user, you can get the latest patches when version <strong>4.5.1-6</strong> of the Eclipse packages hit the "updates-testing" repository either today or tomorrow:</p>
+<div class="highlight"><pre><span></span><span class="gp">$</span> sudo dnf --enablerepo<span class="o">=</span>updates-testing update eclipse<span class="se">\*</span>
+</pre></div>
+
+
+<p>And if you have time, please <a href="https://bodhi.fedoraproject.org/updates/FEDORA-2015-c3a395d3f7">leave feedback</a> (positive or negative) by <a href="https://bodhi.fedoraproject.org/updates/FEDORA-2015-c3a395d3f7">adding a comment</a> in Bodhi, the Fedora updates system.</p>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'mats-blog-o-matic';
+        var disqus_identifier = '06-benefits-of-distro-packaging.html';
+        var disqus_url = './06-benefits-of-distro-packaging.html';
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//mats-blog-o-matic.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://github.com/mbooth101">github</a></li>
+                            <li><a href="https://twitter.com/FOSS_mbooth">twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'mats-blog-o-matic';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
