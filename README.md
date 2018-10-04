@@ -21,7 +21,7 @@ Commit everything when done:
     $ git commit -am "Commit the new content"
     $ git push
 
-Find the new content on the live blog: http://blog.matbooth.co.uk/
+Find the new content on the live blog: [http://blog.matbooth.co.uk/](http://blog.matbooth.co.uk/)
 
 ## License
 
