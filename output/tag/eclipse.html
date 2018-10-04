@@ -3,8 +3,8 @@
 <head>
         <meta charset="utf-8" />
         <title>Mat's Blog-O-Matic - eclipse</title>
-        <link rel="stylesheet" href="../theme/css/main.css" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
+        <link rel="stylesheet" href="//blog.matbooth.co.uk/theme/css/main.css" />
+        <link href="//blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,15 +13,15 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="../">Mat's Blog-O-Matic  <strong>A Linux and coding blog.</strong></a></h1>
+                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic  <strong>A Linux and coding blog.</strong></a></h1>
                 <nav><ul>
-                    <li><a href="../pages/about-mat-booth.html">About Mat Booth</a></li>
+                    <li><a href="//blog.matbooth.co.uk/pages/about-mat-booth.html">About Mat Booth</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../06-benefits-of-distro-packaging.html">Benefits of Linux Distro Packaging</a></h1>
+                    <h1 class="entry-title"><a href="//blog.matbooth.co.uk/06-benefits-of-distro-packaging.html">Benefits of Linux Distro Packaging</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2015-12-09T11:00:00+00:00">
                 Published: Wed 09 December 2015
@@ -32,10 +32,10 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="../author/mat-booth.html">Mat Booth</a>
+                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
         </address>
-<p>In <a href="../category/misc.html">Misc</a>.</p>
-<p>tags: <a href="../tag/fedora.html">fedora</a> <a href="../tag/eclipse.html">eclipse</a> </p>
+<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
 </footer><!-- /.post-info --><p>Recently, I have been adding a lot of patches to the version of Eclipse (Mars.1) that is packaged in Fedora Linux. This post attempts to explain why.</p>
 <p>In my opinion, one of the chief benefits to packaging your software for a Linux distribution is the ability of the distribution to carry patches. These patches generally come in two flavours:</p>
 <p><strong>1. Bug-fixes back-ported from the upstream project.</strong></p>
@@ -45,17 +45,17 @@
 <p><strong>In both cases, the end result is a better user experience for your software on Linux.</strong></p>
 <p>Which brings me back to Eclipse... Since GTK was updated to 3.18 on Fedora there have been some extremely visible rendering bugs in various parts of the Eclipse IDE on Fedora. Most of these bugs have been fixed upstream in Eclipse's master branch, but it's going to be a long time until Eclipse does another release that includes these fixes, even if they are chosen to be cherry-picked for the Mars.2 release. In Fedora, we chose to back-port them to current release Mars.1.</p>
 <p>The following screenshot shows the difference it has made to the background colours in the workspace chooser dialog. Eclipse downloaded from eclipse.org is on the left, Eclipse from the Fedora package is on the right:</p>
-<p><img alt="Workspace Chooser" src="../images/workspace_chooser_colors.png"></p>
+<p><img alt="Workspace Chooser" src="//blog.matbooth.co.uk/images/workspace_chooser_colors.png"></p>
 <p>You should see the same difference in other dialogs too, such as wizard dialogs and the EGit commit dialog.</p>
 <p>The next screenshot shows the difference it has made to the form editor, where text labels used to be positioned incorrectly or oddly truncated. Again, Eclipse downloaded from eclipse.org is on the left, Eclipse from the Fedora package is on the right:</p>
-<p><img alt="Form Editor" src="../images/form_editor_text.png"></p>
+<p><img alt="Form Editor" src="//blog.matbooth.co.uk/images/form_editor_text.png"></p>
 <p>Many thanks to <a href="https://twitter.com/yyzericwill">Eric Williams</a> for getting these highly visible SWT/GTK bugs fixed and committed upstream at eclipse.org and thus allowing me to back-port them to Fedora. I'm sure our users will appreciate it!</p>
 <p>If you are an Eclipse on Fedora user, you can get the latest patches when version <strong>4.5.1-6</strong> of the Eclipse packages hit the "updates-testing" repository either today or tomorrow:</p>
 <div class="highlight"><pre><span></span><span class="gp">$</span> sudo dnf --enablerepo<span class="o">=</span>updates-testing update eclipse<span class="se">\*</span>
 </pre></div>
 
 
-<p>And if you have time, please <a href="https://bodhi.fedoraproject.org/updates/FEDORA-2015-c3a395d3f7">leave feedback</a> (positive or negative) by <a href="https://bodhi.fedoraproject.org/updates/FEDORA-2015-c3a395d3f7">adding a comment</a> in Bodhi, the Fedora updates system.</p><p>There are <a href="../06-benefits-of-distro-packaging.html#disqus_thread">comments</a>.</p>                </article>
+<p>And if you have time, please <a href="https://bodhi.fedoraproject.org/updates/FEDORA-2015-c3a395d3f7">leave feedback</a> (positive or negative) by <a href="https://bodhi.fedoraproject.org/updates/FEDORA-2015-c3a395d3f7">adding a comment</a> in Bodhi, the Fedora updates system.</p><p>There are <a href="//blog.matbooth.co.uk/06-benefits-of-distro-packaging.html#disqus_thread">comments</a>.</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
@@ -64,7 +64,7 @@
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="../05-status-of-eclipse-in-fedora.html" rel="bookmark"
+                    <h1><a href="//blog.matbooth.co.uk/05-status-of-eclipse-in-fedora.html" rel="bookmark"
                            title="Permalink to Status of Eclipse in Fedora">Status of Eclipse in Fedora</a></h1>
                 </header>
 
@@ -79,18 +79,18 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="../author/mat-booth.html">Mat Booth</a>
+                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
         </address>
-<p>In <a href="../category/misc.html">Misc</a>.</p>
-<p>tags: <a href="../tag/fedora.html">fedora</a> <a href="../tag/eclipse.html">eclipse</a> </p>
+<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
 </footer><!-- /.post-info -->                <p>Current status of Eclipse in Fedora.</p>
-                <a class="readmore" href="../05-status-of-eclipse-in-fedora.html">read more</a>
-<p>There are <a href="../05-status-of-eclipse-in-fedora.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+                <a class="readmore" href="//blog.matbooth.co.uk/05-status-of-eclipse-in-fedora.html">read more</a>
+<p>There are <a href="//blog.matbooth.co.uk/05-status-of-eclipse-in-fedora.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="../eclipse-luna-for-fedora-20.html" rel="bookmark"
+                    <h1><a href="//blog.matbooth.co.uk/eclipse-luna-for-fedora-20.html" rel="bookmark"
                            title="Permalink to Eclipse Luna for Fedora 20">Eclipse Luna for Fedora 20</a></h1>
                 </header>
 
@@ -105,18 +105,18 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="../author/mat-booth.html">Mat Booth</a>
+                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
         </address>
-<p>In <a href="../category/misc.html">Misc</a>.</p>
-<p>tags: <a href="../tag/fedora.html">fedora</a> <a href="../tag/eclipse.html">eclipse</a> </p>
+<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
 </footer><!-- /.post-info -->                <p>Eclipse Luna is now available for Fedora 20 as a software collection.</p>
-                <a class="readmore" href="../eclipse-luna-for-fedora-20.html">read more</a>
-<p>There are <a href="../eclipse-luna-for-fedora-20.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+                <a class="readmore" href="//blog.matbooth.co.uk/eclipse-luna-for-fedora-20.html">read more</a>
+<p>There are <a href="//blog.matbooth.co.uk/eclipse-luna-for-fedora-20.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="../exciting-new-eclipse-plugins.html" rel="bookmark"
+                    <h1><a href="//blog.matbooth.co.uk/exciting-new-eclipse-plugins.html" rel="bookmark"
                            title="Permalink to Exciting New Eclipse Plug-ins in Fedora">Exciting New Eclipse Plug-ins in Fedora</a></h1>
                 </header>
 
@@ -131,13 +131,13 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="../author/mat-booth.html">Mat Booth</a>
+                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
         </address>
-<p>In <a href="../category/misc.html">Misc</a>.</p>
-<p>tags: <a href="../tag/fedora.html">fedora</a> <a href="../tag/eclipse.html">eclipse</a> </p>
+<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
 </footer><!-- /.post-info -->                <p>TestNG and PHP Development Tools (PDT) plug-ins are now available in Fedora.</p>
-                <a class="readmore" href="../exciting-new-eclipse-plugins.html">read more</a>
-<p>There are <a href="../exciting-new-eclipse-plugins.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+                <a class="readmore" href="//blog.matbooth.co.uk/exciting-new-eclipse-plugins.html">read more</a>
+<p>There are <a href="//blog.matbooth.co.uk/exciting-new-eclipse-plugins.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
                 </section><!-- /#content -->
@@ -145,7 +145,7 @@
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="//blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/mbooth101">github</a></li>
                             <li><a href="https://twitter.com/FOSS_mbooth">twitter</a></li>
