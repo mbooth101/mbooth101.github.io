@@ -30,6 +30,7 @@ DEFAULT_PAGINATION = False
 
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
+MENUITEMS = [('Fedora', '/tag/fedora.html'), ('Eclipse', '/tag/eclipse.html'), ('DIY', '/tag/diy.html')]
 
 DISQUS_SITENAME = 'mats-blog-o-matic'
 TWITTER_USERNAME = 'FOSS_mbooth'
