@@ -1,6 +1,6 @@
 Title: Don't Know My Own Strength
 Date: 2019-01-29 15:00
-Modified: 2018-01-29 15:00
+Modified: 2019-01-29 15:00
 Category: Misc
 Tags: diy
 Slug: 07-broken-tools
