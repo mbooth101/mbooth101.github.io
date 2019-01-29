@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Mat Booth'
 SITENAME = 'Mat\'s Blog-O-Matic'
-SITESUBTITLE = 'A Linux and coding blog.'
+SITESUBTITLE = 'A Linux, coding and DIY blog.'
 SITEURL = ''
 RELATIVE_URLS = True
 
