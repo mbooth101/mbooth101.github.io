@@ -24,7 +24,91 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="//blog.matbooth.co.uk/07-broken-tools.html">Don't Know My Own Strength</a></h1>
+                    <h1 class="entry-title"><a href="//blog.matbooth.co.uk/08-openjdk-in-flathub.html">The State of Java in Flathub</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2019-07-22T16:00:00+01:00">
+                Published: Mon 22 July 2019
+        </abbr>
+		<br />
+        <abbr class="modified" title="2019-07-22T16:00:00+01:00">
+                Updated: Mon 22 July 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
+        </address>
+<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
+</footer><!-- /.post-info --><h3>"Latest" versus "LTS" OpenJDKs</h3>
+<p>I am now maintaining two streams of OpenJDK SDK extensions in Flathub:</p>
+<ul>
+<li><strong><code>org.freedesktop.Sdk.Extension.openjdk11</code></strong> -- this is supplying the <strong>LTS</strong> (long-term support) OpenJDK 11.</li>
+<li><strong><code>org.freedesktop.Sdk.Extension.openjdk</code></strong> -- this is supplying whatever the current short-lived <strong>Latest</strong> OpenJDK is; it is currently OpenJDK 12. (Note the ommission of a version number suffix in the extension ID, this is intentional.)</li>
+</ul>
+<p>When OpenJDK 13 is released, OpenJDK 12 will be deprecated and the <strong><code>org.freedesktop.Sdk.Extension.openjdk</code></strong> extension will be re-based to OpenJDK 13 -- this is why the version number suffix is omitted from the extension ID.</p>
+<p>The idea of this is to satisfy two use-cases:</p>
+<ul>
+<li><strong>Stability</strong> -- if you want stability, you may continue rely on the on the <strong>LTS</strong> version supplied by the <strong><code>org.freedesktop.Sdk.Extension.openjdk11</code></strong> extension.</li>
+<li><strong>Early Adopters</strong> -- if you want to take advantage of the latest and greatest features and enhancements in OpenJDK, then you can consume the <strong>Latest</strong> version supplied by the <strong><code>org.freedesktop.Sdk.Extension.openjdk</code></strong> extension, which will have periodic major updates when new major versions are released by the OpenJDK project.</li>
+</ul>
+<p>For maintainers of Java-based applications in Flathub, it's worth noting that even if you consume the <strong>Latest</strong> OpenJDK extension in your application, users will not be broken by major updates because OpenJDK is bundled into your Flatpak. The implication of this for users is that they won't see updates to their Java version until the application maintainer rebuilds the application in Flathub.</p>
+<p>If you maintain a Java-based Flatpak application on Flathub, you can consume the latest version of your chosen OpenJDK stream (either <strong>LTS</strong> or <strong>Latest</strong>) simply by rebuilding; the latest version of that OpenJDK steam will be pulled in automatically.</p>
+<h3>New OpenJDK Version Updates</h3>
+<p>Speaking of updates, I recently updated OpenJDK 11 to version <strong>11.0.4</strong> and the OpenJDK 12 to version <strong>12.0.2</strong>; these versions are available now from Flathub.</p>
+<p>It's easy to check which version of Java is shipped with a Flatpak application, using BlueJ as an example:</p>
+<div class="highlight"><pre><span></span>$ flatpak run --command<span class="o">=</span><span class="s1">&#39;java&#39;</span> org.bluej.BlueJ -version
+openjdk version <span class="s2">&quot;11.0.2&quot;</span> <span class="m">2019</span>-01-15
+OpenJDK Runtime Environment <span class="o">(</span>build <span class="m">11</span>.0.2+9<span class="o">)</span>
+OpenJDK <span class="m">64</span>-Bit Server VM <span class="o">(</span>build <span class="m">11</span>.0.2+9, mixed mode<span class="o">)</span>
+</pre></div>
+
+
+<p>From the above we can see that BlueJ contains <strong>11.0.2</strong>, an old version of the <strong>LTS</strong> stream. The application needs rebuilding to take advantage of bug fixes in version <strong>11.0.4</strong>.</p>
+<p>I recommend that all Java-based Flatpak applications are rebuilt to take advantage of fixes in the latest builds of OpenJDK.</p>
+<h3>Using OpenJDK in a New Application</h3>
+<p>I suspect most people figure it out by looking at existing Flatpak manifests, but it's probably worth quickly mentioning how to go about using the OpenJDK platform extensions to ship a Java application in Flathub. In the vast majority of cases, it is probably sufficient to add the SDK extension to the manifest and calling the JRE installation script. For example:</p>
+<div class="highlight"><pre><span></span>{
+  &quot;id&quot; : &quot;org.example.MyApp&quot;,
+  &quot;branch&quot; : &quot;1.0&quot;,
+  &quot;runtime&quot; : &quot;org.freedesktop.Platform&quot;,
+  &quot;runtime-version&quot; : &quot;18.08&quot;,
+  &quot;sdk&quot; : &quot;org.freedesktop.Sdk&quot;,
+  &quot;sdk-extensions&quot; : [ &quot;org.freedesktop.Sdk.Extension.openjdk11&quot; ],
+  &quot;modules&quot; : [ {
+    &quot;name&quot; : &quot;openjdk&quot;,
+    &quot;buildsystem&quot; : &quot;simple&quot;,
+    &quot;build-commands&quot; : [ &quot;/usr/lib/sdk/openjdk11/install.sh&quot; ]
+  }, {
+    &quot;name&quot; : &quot;myapp&quot;,
+    &quot;buildsystem&quot; : &quot;simple&quot;,
+    ....
+  } ]
+  ....
+  &quot;finish-args&quot; : [ &quot;--env=PATH=/app/jre/bin:/usr/bin&quot; ]
+}
+</pre></div>
+
+
+<p>And the JRE will be available in the <code>/app/jre</code> directory. (In this example, <code>/app/jre/bin</code> has also been added to the PATH environment variable.)</p>
+<p>Alternatively, if your application requires a full JDK rather than a JRE, then you can substitute <code>installjdk.sh</code> for <code>install.sh</code> and the JDK will be available in the <code>/app/jdk</code> directory.</p>
+<h3>Deprecated OpenJDKs</h3>
+<p>And finally...</p>
+<p>If your Flatpak application was built against either the <strong><code>org.freedesktop.Sdk.Extension.openjdk9</code></strong> extension or the <strong><code>org.freedesktop.Sdk.Extension.openjdk10</code></strong> extension and therefore ships OpenJDK 9 or 10, then you should know that since the release of OpenJDK 11, these are <strong><em>DEPRECATED</em></strong>. These JDKs are no longer receiving any maintenance or security updates and are considered <strong><em>EOL</em></strong> by the upstream OpenJDK project.</p>
+<p>Please <strong><em>DO NOT</em></strong> use these OpenJDKs for new applications being submitted to Flathub, and please migrate any existing applications to a newer, more supported OpenJDK, preferably 11 or 12 as appropriate.</p>
+<p>At some point I will probably go through Flathub and file bugs against any applications that are still shipping deprecated OpenJDKs, but I would appreciate it if I didn't have to file any. Thanks in advance!</p><p>There are <a href="//blog.matbooth.co.uk/08-openjdk-in-flathub.html#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="//blog.matbooth.co.uk/07-broken-tools.html" rel="bookmark"
+                           title="Permalink to Don't Know My Own Strength">Don't Know My Own Strength</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2019-01-29T15:00:00+00:00">
                 Published: Tue 29 January 2019
@@ -39,31 +123,10 @@
         </address>
 <p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
 <p>tags: <a href="//blog.matbooth.co.uk/tag/diy.html">diy</a> </p>
-</footer><!-- /.post-info --><p>I like to subscribe to Adam Savage's philosophy on buying tools, which goes something along the lines of, <a href="https://www.reddit.com/r/maker/comments/4hv3an/maker_ama_series_i_am_adam_savage_maker/d2slfgb/">"buy cheap tools until you know know what you really need from them, then buy the best version you can afford."</a></p>
-<p>With that in mind I tend to buy the cheapest thing possible for the job I need to do and use it until it breaks, wears out, or otherwise fails before replacing it with a more expensive version. The idea is that I'll have no idea how much use I will get out of a tool so this way, if I end up using a tool just once or twice or year then I haven't wasted any money on expensive tools that I barely use and if I've used a tool so much that I have broken it or worn it out, then I have a good excuse to buy a more expensive tool and will have a much better idea of what to look out for when doing so.</p>
-<p>Here's a compilation of some tools I've broken recently and my plans for their replacement.</p>
-<h3>Rolson Quality Tools Screwdriver</h3>
-<p>When they have to write "quality" on the product, you just know that's exactly what it isn't.</p>
-<p>With this screwdriver I was removing some fitted cupboardry from my porch that was attached to the stone floor with, it turns out, 120mm <a href="https://en.wikipedia.org/wiki/Unobtainium">unobtainium</a> wood screws -- I'm honestly surprised that the handle gave up before stripping the screw head. The handle appears to be made entirely of some kind of rubber polymer and just sheared off the driver shaft in my hands.</p>
-<p><img alt="A &quot;Quality&quot; Screwdriver" src="//blog.matbooth.co.uk/images/diy/07-broken_screwdriver_small.jpg"></p>
-<p>Since I have no special requirements for screwdrivers and this Rolson already lasted for years, I just replaced it with another budget brand driver from the big, orange DIY retailer. This one however appears to have a PA6 Nylon handle (with some rubber overmolding for comfort) so hopefully it holds up better.</p>
-<h3>MacAllister Clamp</h3>
-<p>Although it looks like I squeezed the handle off this clamp, I can't take all the credit for breaking this -- it was mostly a bit of plywood. I was moving a full sheet of 18mm plywood and didn't see that this clamp was on the floor when I set it down, but I did hear the tell-tale crack of snapping plastic. MacAllister is the power tool own-brand from the big, orange DIY retailer, so I don't expect the greatest quality, but I didn't expect the handles to just snap off when subjected to a bit of side-load.</p>
-<p><img alt="A Squeeze Too Far" src="//blog.matbooth.co.uk/images/diy/07-broken_clamp_small.jpg"></p>
-<p>Since this clamp came in a set from the reduced bin, and you can't have too many clamps, I have a bunch of them knocking about so I haven't needed to buy any replacements yet.</p>
-<h3>This Anonymous Clawhammer</h3>
-<p>We've had this old clawhammer for so long I don't remember where it came from originally, but it has been a faithful servant for years until one day when I was (ab)using the claw and exerted what was obviously too much force and the handle finally gave up and snapped in two.</p>
-<p><img alt="The Final Blow" src="//blog.matbooth.co.uk/images/diy/07-broken_hammer_small.jpg"></p>
-<p>I really liked this hammer, so instead of buying a replacement, I will be making a new handle from a nice piece of slow-grown hardwood and repairing it. A future blog post will detail this process.</p>
-<h3>MacAllister Miniature Bench Vice</h3>
-<p>We bought a couple of these cheap, miniature bench vices for work-holding in the sewing room. Unfortunately the plastic knobs on the handles came pre-cracked from the factory and fell off as soon as the vice was out of the box. This means that they are, unsurprisingly, quite difficult to use due to the handle bar falling onto the floor and rolling under the bench whenever you turn it.</p>
-<p><img alt="A Bad Habit" src="//blog.matbooth.co.uk/images/diy/07-broken_vice_hand_small.jpg"></p>
-<p>Since there seems to be nothing wrong with the vices themselves (qualified with a "yet," since they are still brand new) I'll be making some new vice handles in a future blog post so that we can give them a fair try.</p><p>There are <a href="//blog.matbooth.co.uk/07-broken-tools.html#disqus_thread">comments</a>.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>Breaking cheap tools so you don't have to.</p>
+                <a class="readmore" href="//blog.matbooth.co.uk/07-broken-tools.html">read more</a>
+<p>There are <a href="//blog.matbooth.co.uk/07-broken-tools.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

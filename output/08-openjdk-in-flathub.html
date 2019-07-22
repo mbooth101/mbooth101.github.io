@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Mat's Blog-O-Matic - eclipse</title>
+        <title>The State of Java in Flathub</title>
         <link rel="stylesheet" href="//blog.matbooth.co.uk/theme/css/main.css" />
         <link href="//blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
 
@@ -21,10 +21,16 @@
                     <li><a href="//blog.matbooth.co.uk/pages/about-mat-booth.html">About Mat Booth</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="//blog.matbooth.co.uk/08-openjdk-in-flathub.html" rel="bookmark"
+           title="Permalink to The State of Java in Flathub">The State of Java in Flathub</a></h1>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="FOSS_mbooth">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="//blog.matbooth.co.uk/08-openjdk-in-flathub.html">The State of Java in Flathub</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2019-07-22T16:00:00+01:00">
                 Published: Mon 22 July 2019
@@ -39,7 +45,7 @@
         </address>
 <p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
 <p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
-</footer><!-- /.post-info --><h3>"Latest" versus "LTS" OpenJDKs</h3>
+</footer><!-- /.post-info -->      <h3>"Latest" versus "LTS" OpenJDKs</h3>
 <p>I am now maintaining two streams of OpenJDK SDK extensions in Flathub:</p>
 <ul>
 <li><strong><code>org.freedesktop.Sdk.Extension.openjdk11</code></strong> -- this is supplying the <strong>LTS</strong> (long-term support) OpenJDK 11.</li>
@@ -95,118 +101,26 @@ OpenJDK <span class="m">64</span>-Bit Server VM <span class="o">(</span>build <s
 <p>And finally...</p>
 <p>If your Flatpak application was built against either the <strong><code>org.freedesktop.Sdk.Extension.openjdk9</code></strong> extension or the <strong><code>org.freedesktop.Sdk.Extension.openjdk10</code></strong> extension and therefore ships OpenJDK 9 or 10, then you should know that since the release of OpenJDK 11, these are <strong><em>DEPRECATED</em></strong>. These JDKs are no longer receiving any maintenance or security updates and are considered <strong><em>EOL</em></strong> by the upstream OpenJDK project.</p>
 <p>Please <strong><em>DO NOT</em></strong> use these OpenJDKs for new applications being submitted to Flathub, and please migrate any existing applications to a newer, more supported OpenJDK, preferably 11 or 12 as appropriate.</p>
-<p>At some point I will probably go through Flathub and file bugs against any applications that are still shipping deprecated OpenJDKs, but I would appreciate it if I didn't have to file any. Thanks in advance!</p><p>There are <a href="//blog.matbooth.co.uk/08-openjdk-in-flathub.html#disqus_thread">comments</a>.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>At some point I will probably go through Flathub and file bugs against any applications that are still shipping deprecated OpenJDKs, but I would appreciate it if I didn't have to file any. Thanks in advance!</p>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'mats-blog-o-matic';
+        var disqus_identifier = '08-openjdk-in-flathub.html';
+        var disqus_url = '//blog.matbooth.co.uk/08-openjdk-in-flathub.html';
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//mats-blog-o-matic.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="//blog.matbooth.co.uk/06-benefits-of-distro-packaging.html" rel="bookmark"
-                           title="Permalink to Benefits of Linux Distro Packaging">Benefits of Linux Distro Packaging</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-12-09T11:00:00+00:00">
-                Published: Wed 09 December 2015
-        </abbr>
-		<br />
-        <abbr class="modified" title="2015-12-09T11:00:00+00:00">
-                Updated: Wed 09 December 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
-        </address>
-<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
-<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
-</footer><!-- /.post-info -->                <p>Discussing the benefits of packaging your software for Linux distributions.</p>
-                <a class="readmore" href="//blog.matbooth.co.uk/06-benefits-of-distro-packaging.html">read more</a>
-<p>There are <a href="//blog.matbooth.co.uk/06-benefits-of-distro-packaging.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="//blog.matbooth.co.uk/05-status-of-eclipse-in-fedora.html" rel="bookmark"
-                           title="Permalink to Status of Eclipse in Fedora">Status of Eclipse in Fedora</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-08-14T16:00:00+01:00">
-                Published: Fri 14 August 2015
-        </abbr>
-		<br />
-        <abbr class="modified" title="2015-08-14T16:00:00+01:00">
-                Updated: Fri 14 August 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
-        </address>
-<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
-<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
-</footer><!-- /.post-info -->                <p>Current status of Eclipse in Fedora.</p>
-                <a class="readmore" href="//blog.matbooth.co.uk/05-status-of-eclipse-in-fedora.html">read more</a>
-<p>There are <a href="//blog.matbooth.co.uk/05-status-of-eclipse-in-fedora.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="//blog.matbooth.co.uk/eclipse-luna-for-fedora-20.html" rel="bookmark"
-                           title="Permalink to Eclipse Luna for Fedora 20">Eclipse Luna for Fedora 20</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-08-22T13:00:00+01:00">
-                Published: Fri 22 August 2014
-        </abbr>
-		<br />
-        <abbr class="modified" title="2014-08-22T15:00:00+01:00">
-                Updated: Fri 22 August 2014
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
-        </address>
-<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
-<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
-</footer><!-- /.post-info -->                <p>Eclipse Luna is now available for Fedora 20 as a software collection.</p>
-                <a class="readmore" href="//blog.matbooth.co.uk/eclipse-luna-for-fedora-20.html">read more</a>
-<p>There are <a href="//blog.matbooth.co.uk/eclipse-luna-for-fedora-20.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="//blog.matbooth.co.uk/exciting-new-eclipse-plugins.html" rel="bookmark"
-                           title="Permalink to Exciting New Eclipse Plug-ins in Fedora">Exciting New Eclipse Plug-ins in Fedora</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-08-21T14:00:00+01:00">
-                Published: Thu 21 August 2014
-        </abbr>
-		<br />
-        <abbr class="modified" title="2014-08-21T14:00:00+01:00">
-                Updated: Thu 21 August 2014
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
-        </address>
-<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
-<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
-</footer><!-- /.post-info -->                <p>TestNG and PHP Development Tools (PDT) plug-ins are now available in Fedora.</p>
-                <a class="readmore" href="//blog.matbooth.co.uk/exciting-new-eclipse-plugins.html">read more</a>
-<p>There are <a href="//blog.matbooth.co.uk/exciting-new-eclipse-plugins.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
