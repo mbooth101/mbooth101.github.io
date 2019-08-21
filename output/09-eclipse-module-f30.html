@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Eclipse is Now a Module on Fedora 30</title>
+        <link rel="stylesheet" href="//blog.matbooth.co.uk/theme/css/main.css" />
+        <link href="//blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic  <strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/tag/fedora.html">Fedora</a></li>
+                    <li><a href="/tag/eclipse.html">Eclipse</a></li>
+                    <li><a href="/tag/diy.html">DIY</a></li>
+                    <li><a href="//blog.matbooth.co.uk/pages/about-mat-booth.html">About Mat Booth</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="//blog.matbooth.co.uk/09-eclipse-module-f30.html" rel="bookmark"
+           title="Permalink to Eclipse is Now a Module on Fedora 30">Eclipse is Now a Module on Fedora 30</a></h1>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="FOSS_mbooth">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2019-08-21T14:30:00+01:00">
+                Published: Wed 21 August 2019
+        </abbr>
+		<br />
+        <abbr class="modified" title="2019-08-21T14:30:00+01:00">
+                Updated: Wed 21 August 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
+        </address>
+<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
+</footer><!-- /.post-info -->      <p><img alt="Eclipse IDE Logo" src="//blog.matbooth.co.uk/images/eclipse-logo.jpg"></p>
+<p>From Fedora 30 onwards, Eclipse will be available as a module for <a href="https://docs.fedoraproject.org/en-US/modularity/">Fedora Modularity</a>.</p>
+<p>When you query <code>dnf</code> for the available modules you will see this:</p>
+<div class="highlight"><pre><span></span>[mbooth@fedora30 ~]$ sudo dnf module list eclipse
+Last metadata expiration check: 1:28:20 ago on Wed 21 Aug 2019 12:05:22 BST.
+Fedora Modular 30 - x86_64 - Updates
+Name                   Stream                 Profiles                              Summary                                                       
+eclipse                2019-06                java [d], c, everything               An open, extensible IDE and application platform              
+
+Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
+</pre></div>
+
+
+<p>This shows that <strong>Eclipse 2019-06</strong> is available to install with three different profiles from which to choose. Each profile will install the Eclipse IDE and a curated set of plug-ins for accomplishing specific tasks.</p>
+<ul>
+<li><strong>java</strong> -- This is the default profile and will install everything you need to start developing Java applications.</li>
+<li><strong>c</strong> -- This profile will install everything you need to start developing C/C++ applications.</li>
+<li><strong>everything</strong> -- This profile will install all the Eclipse plug-ins currently available in the module, including those that are a part of the above two profiles.</li>
+</ul>
+<p>To install the Eclipse with the default profile, simply invoke <code>dnf</code> like this:</p>
+<div class="highlight"><pre><span></span>[mbooth@fedora30 ~]$ sudo dnf module install eclipse
+</pre></div>
+
+
+<p>Then you can launch Eclipse in the usual way from your desktop environment. If you later decide you need the extra plug-ins from the other profiles, you can simply do this to get them:</p>
+<div class="highlight"><pre><span></span>[mbooth@fedora30 ~]$ sudo dnf module install eclipse/c
+[mbooth@fedora30 ~]$ # ...or...
+[mbooth@fedora30 ~]$ sudo dnf module install eclipse/everything
+</pre></div>
+
+
+<p>You can read more about managing which modules you have installed in the <a href="https://docs.fedoraproject.org/en-US/modularity/using-modules/">Fedora Modularity documentation</a>.</p>
+<p><strong>Public Service Announcement:</strong> I encourage all Fedora Eclipse users to start using the Modularity version because in order to reduce my package maintenance overhead, the packages from the base distro will eventually be retired.</p>
+<p>Thanks for your attention!</p>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'mats-blog-o-matic';
+        var disqus_identifier = '09-eclipse-module-f30.html';
+        var disqus_url = '//blog.matbooth.co.uk/09-eclipse-module-f30.html';
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//mats-blog-o-matic.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="//blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://github.com/mbooth101">github</a></li>
+                            <li><a href="https://twitter.com/FOSS_mbooth">twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'mats-blog-o-matic';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
