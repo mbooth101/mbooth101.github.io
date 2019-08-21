@@ -22,7 +22,8 @@ AUTHOR_FEED_RSS = None
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/mbooth101'),
-          ('twitter', 'https://twitter.com/FOSS_mbooth'),)
+          ('twitter', 'https://twitter.com/FOSS_mbooth'),
+          ('email', 'mailto:mbooth@fedoraproject.org'),)
 
 STATIC_PATHS = ['images']
 
@@ -32,5 +33,5 @@ DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = [('Fedora', '/tag/fedora.html'), ('Eclipse', '/tag/eclipse.html'), ('DIY', '/tag/diy.html')]
 
-DISQUS_SITENAME = 'mats-blog-o-matic'
+#DISQUS_SITENAME = 'mats-blog-o-matic'
 TWITTER_USERNAME = 'FOSS_mbooth'
