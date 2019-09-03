@@ -9,7 +9,7 @@ Summary: Additional information about installing the Eclipse IDE module on F30.
 
 ![Eclipse IDE Logo]({filename}/images/eclipse-logo.jpg)
 
-As [I wrote previously]({filename}/09-eclipse-module-f30.html) Eclipse is now available as a module for [Fedora Modularity](https://docs.fedoraproject.org/en-US/modularity/).
+As [I wrote previously](/09-eclipse-module-f30.html) Eclipse is now available as a module for [Fedora Modularity](https://docs.fedoraproject.org/en-US/modularity/).
 
 After I wrote that blog post I received some reports of installation difficulty. Some people are experiencing this kind of error:
 
