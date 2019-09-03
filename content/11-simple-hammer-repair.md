@@ -5,9 +5,9 @@ Category: Misc
 Tags: diy
 Slug: 11-simple-hammer-repair
 Author: Mat Booth
-Summary: You may recall from my [previous post about broken tools]({filename}/07-broken-tools.html) that I broke my favourite hammer by using the claw to break down what turned out to be some really sturdy cupboardry. In this post I document the manufacture of a new handle from scratch.
+Summary: You may recall from my [previous post about broken tools](/07-broken-tools.html) that I broke my favourite hammer by using the claw to break down what turned out to be some really sturdy cupboardry. In this post I document the manufacture of a new handle from scratch.
 
-You may recall from my [previous post about broken tools]({filename}/07-broken-tools.html) that I broke my favourite hammer by using the claw to break down what turned out to be some **really** sturdy cupboardry. In this post I document the manufacture of a new handle from scratch.
+You may recall from my [previous post about broken tools](/07-broken-tools.html) that I broke my favourite hammer by using the claw to break down what turned out to be some **really** sturdy cupboardry. In this post I document the manufacture of a new handle from scratch.
 
 ### Starting from Scrap
 
