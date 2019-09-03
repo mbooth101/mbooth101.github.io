@@ -1,6 +1,6 @@
 Title: Don't Know My Own Strength
 Date: 2019-01-29 15:00
-Modified: 2019-01-29 15:00
+Modified: 2019-09-03 12:00
 Category: Misc
 Tags: diy
 Slug: 07-broken-tools
@@ -37,7 +37,7 @@ We've had this old clawhammer for so long I don't remember where it came from or
 
 ![The Final Blow]({filename}/images/diy/07-broken_hammer_small.jpg)
 
-I really liked this hammer, so instead of buying a replacement, I will be making a new handle from a nice piece of slow-grown hardwood and repairing it. A future blog post will detail this process.
+I really liked this hammer, so instead of buying a replacement, I will be making a new handle from a nice piece of slow-grown hardwood and repairing it. [A future blog post]({filename}/11-simple-hammer-repair.html) will detail this process.
 
 ### MacAllister Miniature Bench Vice
 
