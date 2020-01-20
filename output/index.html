@@ -5,15 +5,11 @@
         <title>Mat's Blog-O-Matic</title>
         <link rel="stylesheet" href="//blog.matbooth.co.uk/theme/css/main.css" />
         <link href="//blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
-
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic  <strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic <strong>A Linux, coding and DIY blog.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/tag/fedora.html">Fedora</a></li>
                     <li><a href="/tag/eclipse.html">Eclipse</a></li>
@@ -24,7 +20,74 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="//blog.matbooth.co.uk/11-simple-hammer-repair.html">Simple Hammer Repair</a></h1>
+                    <h1 class="entry-title"><a href="//blog.matbooth.co.uk/12-eclipse-now-in-flathub.html">Eclipse 2019-12 Now Available From Flathub</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2020-01-20T16:00:00+00:00">
+                Published: Mon 20 January 2020
+        </abbr>
+		<br />
+        <abbr class="modified" title="2020-01-20T16:00:00+00:00">
+                Updated: Mon 20 January 2020
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
+        </address>
+<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
+</footer><!-- /.post-info --><p><img alt="Eclipse IDE Logo" src="//blog.matbooth.co.uk/images/eclipse-logo.jpg"></p>
+<p>Good news! Eclipse 2019-12 is now available from <a href="https://flathub.org/apps/search/eclipse%20ide">Flathub</a>, the central application repository for Flatpak applications. Two flavours of Eclipse IDE are now available from Flathub:</p>
+<ul>
+<li><a href="https://flathub.org/apps/details/org.eclipse.Java">Eclipse IDE for Java Developers</a> -- The essential tooling for any Java developer.</li>
+<li><a href="https://flathub.org/apps/details/org.eclipse.Committers">Eclipse IDE for Eclipse Committers</a> -- Tooling for development of Eclipse itself at Eclipse.org.</li>
+</ul>
+<p>See the TL;DR section at the bottom of this article if you want to quickly get started now!</p>
+<h2>Why Flatpak?</h2>
+<p>If you don't already know, <a href="https://flatpak.org/">Flatpak</a> is the new way to build and distribute desktop applications for Linux. You can use <a href="https://flathub.org/">Flathub</a> to gain access to a growing collection of Flatpak applications, including Eclipse IDE. You just need to <a href="https://flatpak.org/setup/">follow the setup instructions</a> for your Linux distribution.</p>
+<p>I've discussed before on this blog about the <a href="/06-benefits-of-distro-packaging.html">benefits of packaging software for Linux distributions</a> but from the upstream project's point of view, there are two big problems that distro packaging does not solve:</p>
+<ul>
+<li>There are so many Linuxes!</li>
+</ul>
+<p>After all the hard work of packaging your application, it is still only available for only one distro. Keeping Eclipse RPMs maintained in Fedora is almost a full time job, it would be almost impossible for me to duplicate that work for Ubuntu, for example, where a completely different packaging format is used.</p>
+<ul>
+<li>Forwards and backwards compatibility.</li>
+</ul>
+<p>Different Linux distributions package different versions of your dependencies, which makes it difficult to ensure that your application works on them all. Eclipse SWT supports a large range of GTK versions for this reason and it has historically been a lot of work for the SWT contributors. It would be unfair only support the latest versions of GTK on cutting edge platforms like Fedora and Ubuntu at the expense of users on slow-moving enterprise-style distros like RHEL or SLES; or vice-versa.</p>
+<h2>Yes, but why Flatpak?</h2>
+<p>Flatpak solves both these problems whilst keeping the polished, tight integration with the host system that traditional Linux distro packaging provides. It does this by providing common runtime environments that work on every Linux distribution that supports Flatpak.</p>
+<p>The implication this has for Eclipse is that we can make the IDE available everywhere Flatpak is supported at almost no additional cost in resources and users can even get the same shiny new version of the IDE on older versions of Linux distros where it would have been impossible to upgrade the in-distro packages. If SWT raises the draw-bridge on old versions of GTK and you can't upgrade your Linux distro, or you want to use Eclipse on a yet-to-be-released version of your Linux distro which has a version of GTK untested by Eclipse, then it's not longer a problem because the Flatpak runtime provides a stable and predictable runtime environment. No longer do we have to worry about API/ABI breakage caused by the distro upgrading dependencies too quickly, or not quickly enough, for Eclipse.</p>
+<p>Having such a predictable runtime environment for Eclipse will also help a great deal in diagnosing reported problems. A consistent Flatpak runtime across Linux distributions will greatly reduce the chances that we are bitten, for example, by Ubuntu-specific bugs that cannot be reproduced on Fedora.</p>
+<h2>TL;DR - Instructions for the Impatient</h2>
+<p>Enable the Flathub repository:</p>
+<div class="highlight"><pre><span></span>$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+</pre></div>
+
+
+<p>Install the IDE:</p>
+<div class="highlight"><pre><span></span>$ flatpak install flathub org.eclipse.Java
+</pre></div>
+
+
+<p>Or:</p>
+<div class="highlight"><pre><span></span>$ flatpak install flathub org.eclipse.Committers
+</pre></div>
+
+
+<h2>Bugs?</h2>
+<p>If you encounter any bugs that you suspect are specific to the Flatpak version of Eclipse IDE, please consider <a href="https://github.com/flathub/org.eclipse.Java/issues">reporting them at the Github repo</a> where it is maintained. Thanks!</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="//blog.matbooth.co.uk/11-simple-hammer-repair.html" rel="bookmark"
+                           title="Permalink to Simple Hammer Repair">Simple Hammer Repair</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2019-09-03T12:00:00+01:00">
                 Published: Tue 03 September 2019
@@ -39,39 +102,10 @@
         </address>
 <p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
 <p>tags: <a href="//blog.matbooth.co.uk/tag/diy.html">diy</a> </p>
-</footer><!-- /.post-info --><p>You may recall from my <a href="/07-broken-tools.html">previous post about broken tools</a> that I broke my favourite hammer by using the claw to break down what turned out to be some <strong>really</strong> sturdy cupboardry. In this post I document the manufacture of a new handle from scratch.</p>
-<h3>Starting from Scrap</h3>
-<p>I've had this piece of hardwood offcut in my scrap drawer for a while and thought it would be ideal for this project. Unfortunately I'm not a woodologist so I can't tell you what species this is but the grain is much finer and straighter than the original handle. Let's assume that's a good thing for this application.</p>
-<p><img alt="One Man's Rubbish..." src="//blog.matbooth.co.uk/images/diy/11-1-table-saw-blank_small.jpg"></p>
-<p>I cut out a handle blank that is a bit larger in all dimensions than the original handle using the table saw, then with a hand saw I cut a tenon in one end so that it was a snug fit into the hammer head.</p>
-<p><img alt="Not a Shark" src="//blog.matbooth.co.uk/images/diy/11-2-hammer-head-tenon_small.jpg"></p>
-<h3>Taking Shape</h3>
-<p>Sharp corners are no good for a handle, so the next job was to take a hand file and start adding some contours. I used the file to bring the shoulders of the tenon in to where the wood meets the metal.</p>
-<p><img alt="Those Curves!" src="//blog.matbooth.co.uk/images/diy/11-3-hand-filed-shoulder_small.jpg"></p>
-<p>That nice straight grain meant that as soon as I added some curves, pretty patterns immediately appeared. Below is a shot of the whole thing after sanding some ergonomics into the rest of the handle.</p>
-<p><img alt="Hit Stuff in Comfort" src="//blog.matbooth.co.uk/images/diy/11-4-shaped-handle_small.jpg"></p>
-<p>The two metal wedges you can see in the bottom right of the above picture are the wedges that were retaining the old handle in the head of the hammer. In the end I decided not to re-use these and instead made a wooden wedge from the same stock as the new handle.</p>
-<h3>Finishing</h3>
-<p>After giving it some sanding with slightly higher grit I gave it a couple coats of a hard-wearing poly-urethane varnish. This is a tool I expect to use often, so I want it to be able to resist some punishment.</p>
-<p><img alt="Hit Stuff in Style" src="//blog.matbooth.co.uk/images/diy/11-5-varnish-leather_small.jpg"></p>
-<p>You can see I also drilled a hole in the end of the handle and tied on a loop of scrap leather. I've no idea yet if I will find this feature useful. Maybe it'll be handy to be able to hang it somewhere when I'm up a ladder. Maybe I'll just swing it around like Thor...</p>
-<p>The final step is to permanently affix the head onto the handle.</p>
-<p><img alt="And Only for a Minute" src="//blog.matbooth.co.uk/images/diy/11-6-wedge-just-the-tip_small.jpg"></p>
-<p>I made a one-saw-kerf-width slot in the tenon and fashioned a crude wedge on the belt sander from a slice of the same stock as I used for the handle. Once I was ready to commit, I applied some PVA and hammered the wedge home. After letting the glue dry I was able to trim off the excess with a hand saw and sand it flush.</p>
-<p><img alt="Feeling Flush" src="//blog.matbooth.co.uk/images/diy/11-7-wedge-trimmed-flush_small.jpg"></p>
-<p>Here is the finished article side-by-side with the old handle. I'm pretty happy with it. Table saw scale for, er, scale.</p>
-<p><img alt="No Bananas, Sorry" src="//blog.matbooth.co.uk/images/diy/11-8-finished-comparison_small.jpg"></p>
-<h3>Bonus Nine Month Update!</h3>
-<p>Since I managed to procrastinate writing this post for more than half a year, and I've used this hammer most weekends since January (it is September now) for various projects, including ripping out my bathroom (I will likely talk about that in a future post) I can tell you how well my repair went!</p>
-<p>It has put up with a fair amount of abuse and there are plenty of dings and dents in the finish to show for it, but there is no actual damage to the handle, which is good. I'm pleased with the shape and the extra length in the handle too as compared to the original; it's quite comfortable to use.</p>
-<p>One thing that did happen however is that after a few weeks of really beating on a cold chisel to remove some tiling and plaster work, the head was starting to work its way loose. Not because the wedge was becoming unstuck though, it seems like the wood fibres in the tenon had just compressed a bit after some amount of bedding in. I disassembled the hammer by drilling out the original wedge and reinforced it by cutting two more saw-kerfs into the tenon and making three new wooden wedges. Here it is after the glue has set and the wedges sawn flush.</p>
-<p><img alt="It's Called &quot;Character&quot;" src="//blog.matbooth.co.uk/images/diy/11-9-update-wedges_small.jpg"></p>
-<p>It has been completely solid ever since. Sure, it's a bit uglier now because the end of the tenon sits a little bit below the top of the hammer head preventing sanding, but who cares; it's a tool for using not for looking at. And that loop of leather at the end of the handle? Ultimately pointless, I do just swing it about like Thor after all...</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>You may recall from my <a href="/07-broken-tools.html">previous post about broken tools</a> that I broke my favourite hammer by using the claw to break down what turned out to be some really sturdy cupboardry. In this post I document the manufacture of a new handle from scratch.</p>
+                <a class="readmore" href="//blog.matbooth.co.uk/11-simple-hammer-repair.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
