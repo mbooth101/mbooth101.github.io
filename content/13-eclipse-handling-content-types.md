@@ -1,6 +1,6 @@
 Title: Eclipse and Handling Content Types on Linux
-Date: 2020-02-06 14:30
-Modified: 2020-02-06 14:30
+Date: 2020-02-06 15:00
+Modified: 2020-02-06 15:00
 Category: Misc
 Tags: fedora, eclipse
 Slug: 13-eclipse-handling-content-types
