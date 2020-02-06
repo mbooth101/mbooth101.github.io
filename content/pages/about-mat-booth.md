@@ -5,7 +5,7 @@ Slug: about-mat-booth
 Author: Mat Booth
 Summary: Mat Booth is a software engineer on the Red Hat Eclipse Team.
 
-![Hackergotchi]({filename}/images/hackergotchi-mbooth.png)
+![Hackergotchi]({static}/images/hackergotchi-mbooth.png)
 
 I am a software engineer on the Red Hat Eclipse Team. This blog mostly talks about my time hacking on Eclipse, Fedora and miscellaneous other free and open source projects. You may also see my DIY projects detailed here from time to time.
 
