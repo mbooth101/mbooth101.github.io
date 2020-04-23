@@ -9,7 +9,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic <strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic<strong>A Linux, coding and DIY blog.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/tag/fedora.html">Fedora</a></li>
                     <li><a href="/tag/eclipse.html">Eclipse</a></li>
@@ -44,7 +44,7 @@
 </footer><!-- /.post-info -->      <p><img alt="Eclipse IDE Logo" src="//blog.matbooth.co.uk/images/eclipse-logo.jpg"></p>
 <p>As <a href="/09-eclipse-module-f30.html">I wrote previously</a> Eclipse is now available as a module for <a href="https://docs.fedoraproject.org/en-US/modularity/">Fedora Modularity</a>.</p>
 <p>After I wrote that blog post I received some reports of installation difficulty. Some people are experiencing this kind of error:</p>
-<div class="highlight"><pre><span></span>$ sudo dnf module install eclipse
+<div class="highlight"><pre><span></span><code>$ sudo dnf module install eclipse
 Error: Problems in request:
 broken groups or modules: eclipse
 Modular dependency problems:
@@ -53,12 +53,12 @@ Modular dependency problems:
   - module eclipse:2019-06:3020190807134759:6ebe2c0f-0.x86_64 requires module<span class="o">(</span>ant:1.10<span class="o">)</span>, but none of the providers can be installed
   - module ant:1.10:2820190409091957:819b5873-0.x86_64 is disabled
   - module ant:1.10:2820190508055149:819b5873-0.x86_64 is disabled
-</pre></div>
+</code></pre></div>
 
 
 <p>It appears that if you have previously explicitly disabled a module on which Eclipse depends, then this user action takes precedence over any implicit enablement of module dependencies. I assume this is an intentional behaviour of DNF (hopefully any DNF people reading can correct this assumption if it is not true) but IMO it should probably ask the user if they want to enable the previously disabled module since that is clearly the only way forward.</p>
 <p>In order to fix this situation, you can use the <code>dnf</code> command to reset the module state so that it is no longer explicitly enabled or disabled. For example, to reset the state of all modules that Eclipse depends on:</p>
-<div class="highlight"><pre><span></span>$ sudo dnf module reset ant maven
+<div class="highlight"><pre><span></span><code>$ sudo dnf module reset ant maven
 Dependencies resolved.
 <span class="o">=====================================================================================================================</span>
  Package                           Architecture            Version                     Repository                <span class="nv">Size</span>
@@ -71,7 +71,7 @@ Transaction <span class="nv">Summary</span>
 
 Is this ok <span class="o">[</span>y/N<span class="o">]</span>: y
 Complete!
-</pre></div>
+</code></pre></div>
 
 
 <p>You can now <a href="{filename}/09-eclipse-module-f30.html">install the Eclipse module as documented previously</a>.</p>

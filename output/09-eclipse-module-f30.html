@@ -9,7 +9,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic <strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic<strong>A Linux, coding and DIY blog.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/tag/fedora.html">Fedora</a></li>
                     <li><a href="/tag/eclipse.html">Eclipse</a></li>
@@ -44,14 +44,14 @@
 </footer><!-- /.post-info -->      <p><img alt="Eclipse IDE Logo" src="//blog.matbooth.co.uk/images/eclipse-logo.jpg"></p>
 <p>From Fedora 30 onwards, Eclipse will be available as a module for <a href="https://docs.fedoraproject.org/en-US/modularity/">Fedora Modularity</a>.</p>
 <p>When you query <code>dnf</code> for the available modules you will see this:</p>
-<div class="highlight"><pre><span></span>[mbooth@fedora30 ~]$ sudo dnf module list eclipse
-Last metadata expiration check: 1:28:20 ago on Wed 21 Aug 2019 12:05:22 BST.
-Fedora Modular 30 - x86_64 - Updates
-Name                   Stream                 Profiles                              Summary                                                       
-eclipse                2019-06                java [d], c, everything               An open, extensible IDE and application platform              
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">eclipse</span><span class="w"></span>
+<span class="k">Last</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="n">expiration</span><span class="w"> </span><span class="k">check</span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="mi">28</span><span class="err">:</span><span class="mi">20</span><span class="w"> </span><span class="n">ago</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">Wed</span><span class="w"> </span><span class="mi">21</span><span class="w"> </span><span class="n">Aug</span><span class="w"> </span><span class="mi">2019</span><span class="w"> </span><span class="mi">12</span><span class="err">:</span><span class="mi">05</span><span class="err">:</span><span class="mi">22</span><span class="w"> </span><span class="n">BST</span><span class="p">.</span><span class="w"></span>
+<span class="n">Fedora</span><span class="w"> </span><span class="n">Modular</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x86_64</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Updates</span><span class="w"></span>
+<span class="n">Name</span><span class="w">                   </span><span class="n">Stream</span><span class="w">                 </span><span class="n">Profiles</span><span class="w">                              </span><span class="n">Summary</span><span class="w">                                                       </span>
+<span class="n">eclipse</span><span class="w">                </span><span class="mi">2019</span><span class="o">-</span><span class="mi">06</span><span class="w">                </span><span class="n">java</span><span class="w"> </span><span class="o">[</span><span class="n">d</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">everything</span><span class="w">               </span><span class="n">An</span><span class="w"> </span><span class="k">open</span><span class="p">,</span><span class="w"> </span><span class="n">extensible</span><span class="w"> </span><span class="n">IDE</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">application</span><span class="w"> </span><span class="n">platform</span><span class="w">              </span>
 
-Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
-</pre></div>
+<span class="nl">Hint</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">d</span><span class="o">]</span><span class="n">efault</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">e</span><span class="o">]</span><span class="n">nabled</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">x</span><span class="o">]</span><span class="n">disabled</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="n">nstalled</span><span class="w"></span>
+</code></pre></div>
 
 
 <p>This shows that <strong>Eclipse 2019-06</strong> is available to install with three different profiles from which to choose. Each profile will install the Eclipse IDE and a curated set of plug-ins for accomplishing specific tasks.</p>
@@ -61,15 +61,15 @@ Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
 <li><strong>everything</strong> -- This profile will install all the Eclipse plug-ins currently available in the module, including those that are a part of the above two profiles.</li>
 </ul>
 <p>To install the Eclipse with the default profile, simply invoke <code>dnf</code> like this:</p>
-<div class="highlight"><pre><span></span>[mbooth@fedora30 ~]$ sudo dnf module install eclipse
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">eclipse</span><span class="w"></span>
+</code></pre></div>
 
 
 <p>Then you can launch Eclipse in the usual way from your desktop environment. If you later decide you need the extra plug-ins from the other profiles, you can simply do this to get them:</p>
-<div class="highlight"><pre><span></span>[mbooth@fedora30 ~]$ sudo dnf module install eclipse/c
-[mbooth@fedora30 ~]$ # ...or...
-[mbooth@fedora30 ~]$ sudo dnf module install eclipse/everything
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">eclipse</span><span class="o">/</span><span class="n">c</span><span class="w"></span>
+<span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="p">...</span><span class="ow">or</span><span class="p">...</span><span class="w"></span>
+<span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">eclipse</span><span class="o">/</span><span class="n">everything</span><span class="w"></span>
+</code></pre></div>
 
 
 <p>You can read more about managing which modules you have installed in the <a href="https://docs.fedoraproject.org/en-US/modularity/using-modules/">Fedora Modularity documentation</a>.</p>

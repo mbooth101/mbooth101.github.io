@@ -9,7 +9,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic <strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic<strong>A Linux, coding and DIY blog.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/tag/fedora.html">Fedora</a></li>
                     <li><a href="/tag/eclipse.html">Eclipse</a></li>
@@ -58,44 +58,44 @@
 <h3>New OpenJDK Version Updates</h3>
 <p>Speaking of updates, I recently updated OpenJDK 11 to version <strong>11.0.4</strong> and the OpenJDK 12 to version <strong>12.0.2</strong>; these versions are available now from Flathub.</p>
 <p>It's easy to check which version of Java is shipped with a Flatpak application, using BlueJ as an example:</p>
-<div class="highlight"><pre><span></span>$ flatpak run --command<span class="o">=</span><span class="s1">&#39;java&#39;</span> org.bluej.BlueJ -version
+<div class="highlight"><pre><span></span><code>$ flatpak run --command<span class="o">=</span><span class="s1">&#39;java&#39;</span> org.bluej.BlueJ -version
 openjdk version <span class="s2">&quot;11.0.2&quot;</span> <span class="m">2019</span>-01-15
 OpenJDK Runtime Environment <span class="o">(</span>build <span class="m">11</span>.0.2+9<span class="o">)</span>
 OpenJDK <span class="m">64</span>-Bit Server VM <span class="o">(</span>build <span class="m">11</span>.0.2+9, mixed mode<span class="o">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>From the above we can see that BlueJ contains <strong>11.0.2</strong>, an old version of the <strong>LTS</strong> stream. The application needs rebuilding to take advantage of bug fixes in version <strong>11.0.4</strong>.</p>
 <p>I recommend that all Java-based Flatpak applications are rebuilt to take advantage of fixes in the latest builds of OpenJDK.</p>
 <h3>Using OpenJDK in a New Application</h3>
 <p>I suspect most people figure it out by looking at existing Flatpak manifests, but it's probably worth quickly mentioning how to go about using the OpenJDK platform extensions to ship a Java application in Flathub. In the vast majority of cases, it is probably sufficient to add the SDK extension to the manifest and calling the JRE installation script. For example:</p>
-<div class="highlight"><pre><span></span>{
-  &quot;id&quot; : &quot;org.example.MyApp&quot;,
-  &quot;branch&quot; : &quot;1.0&quot;,
-  &quot;runtime&quot; : &quot;org.freedesktop.Platform&quot;,
-  &quot;runtime-version&quot; : &quot;18.08&quot;,
-  &quot;sdk&quot; : &quot;org.freedesktop.Sdk&quot;,
-  &quot;sdk-extensions&quot; : [ &quot;org.freedesktop.Sdk.Extension.openjdk11&quot; ],
-  &quot;modules&quot; : [ {
-    &quot;name&quot; : &quot;openjdk&quot;,
-    &quot;buildsystem&quot; : &quot;simple&quot;,
-    &quot;build-commands&quot; : [ &quot;/usr/lib/sdk/openjdk11/install.sh&quot; ]
-  }, {
-    &quot;name&quot; : &quot;myapp&quot;,
-    &quot;buildsystem&quot; : &quot;simple&quot;,
-    ....
-  } ]
-  ....
-  &quot;finish-args&quot; : [ &quot;--env=PATH=/app/jre/bin:/usr/bin&quot; ]
-}
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">{</span>
+  <span class="ss">&quot;id&quot;</span> <span class="p">:</span> <span class="ss">&quot;org.example.MyApp&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;branch&quot;</span> <span class="p">:</span> <span class="ss">&quot;1.0&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;runtime&quot;</span> <span class="p">:</span> <span class="ss">&quot;org.freedesktop.Platform&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;runtime-version&quot;</span> <span class="p">:</span> <span class="ss">&quot;18.08&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;sdk&quot;</span> <span class="p">:</span> <span class="ss">&quot;org.freedesktop.Sdk&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;sdk-extensions&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="ss">&quot;org.freedesktop.Sdk.Extension.openjdk11&quot;</span> <span class="p">],</span>
+  <span class="ss">&quot;modules&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="err">{</span>
+    <span class="ss">&quot;name&quot;</span> <span class="p">:</span> <span class="ss">&quot;openjdk&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;buildsystem&quot;</span> <span class="p">:</span> <span class="ss">&quot;simple&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;build-commands&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="ss">&quot;/usr/lib/sdk/openjdk11/install.sh&quot;</span> <span class="p">]</span>
+  <span class="err">}</span><span class="p">,</span> <span class="err">{</span>
+    <span class="ss">&quot;name&quot;</span> <span class="p">:</span> <span class="ss">&quot;myapp&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;buildsystem&quot;</span> <span class="p">:</span> <span class="ss">&quot;simple&quot;</span><span class="p">,</span>
+    <span class="p">....</span>
+  <span class="err">}</span> <span class="p">]</span>
+  <span class="p">....</span>
+  <span class="ss">&quot;finish-args&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="ss">&quot;--env=PATH=/app/jre/bin:/usr/bin&quot;</span> <span class="p">]</span>
+<span class="err">}</span>
+</code></pre></div>
 
 
 <p>And the JRE will be available in the <code>/app/jre</code> directory. (In this example, <code>/app/jre/bin</code> has also been added to the PATH environment variable.)</p>
 <p>Alternatively, if your application requires a full JDK rather than a JRE, then you can substitute <code>installjdk.sh</code> for <code>install.sh</code> and the JDK will be available in the <code>/app/jdk</code> directory.</p>
 <h3>Deprecated OpenJDKs</h3>
 <p>And finally...</p>
-<p>If your Flatpak application was built against either the <strong><code>org.freedesktop.Sdk.Extension.openjdk9</code></strong> extension or the <strong><code>org.freedesktop.Sdk.Extension.openjdk10</code></strong> extension and therefore ships OpenJDK 9 or 10, then you should know that since the release of OpenJDK 11, these are <strong><em>DEPRECATED</em></strong>. These JDKs are no longer receiving any maintenance or security updates and are considered <strong><em>EOL</em></strong> by the upstream OpenJDK project.</p>
+<p>If your Flatpak application was built against either the <strong><code>org.freedesktop.Sdk.Extension.openjdk9</code>*<em> extension or the <strong><code>org.freedesktop.Sdk.Extension.openjdk10</code></strong> extension and therefore ships OpenJDK 9 or 10, then you should know that since the release of OpenJDK 11, these are </em></strong>DEPRECATED<strong><em>. These JDKs are no longer receiving any maintenance or security updates and are considered </em></strong>EOL*** by the upstream OpenJDK project.</p>
 <p>Please <strong><em>DO NOT</em></strong> use these OpenJDKs for new applications being submitted to Flathub, and please migrate any existing applications to a newer, more supported OpenJDK, preferably 11 or 12 as appropriate.</p>
 <p>At some point I will probably go through Flathub and file bugs against any applications that are still shipping deprecated OpenJDKs, but I would appreciate it if I didn't have to file any. Thanks in advance!</p>
     </div><!-- /.entry-content -->

@@ -7,7 +7,7 @@ Slug: 10-eclipse-module-f30-addendum
 Author: Mat Booth
 Summary: Additional information about installing the Eclipse IDE module on F30.
 
-![Eclipse IDE Logo]({filename}/images/eclipse-logo.jpg)
+![Eclipse IDE Logo]({static}/images/eclipse-logo.jpg)
 
 As [I wrote previously](/09-eclipse-module-f30.html) Eclipse is now available as a module for [Fedora Modularity](https://docs.fedoraproject.org/en-US/modularity/).
 

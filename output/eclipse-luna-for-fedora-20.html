@@ -9,7 +9,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic <strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic<strong>A Linux, coding and DIY blog.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/tag/fedora.html">Fedora</a></li>
                     <li><a href="/tag/eclipse.html">Eclipse</a></li>
@@ -46,15 +46,15 @@
 <p>A software collection is simply a set of RPMs whose contents are isolated from the rest of your system such that they do not modify, overwrite or otherwise conflict with anything in the main Fedora repositories. This allows you install multiple versions of a software stack side-by-side, without them interfering with one another. More can be read about this mechanism on the <a href="https://www.softwarecollections.org/en/">software collections website</a>.</p>
 <p>The Eclipse Luna software collection lives in a <a href="https://www.softwarecollections.org/en/scls/mbooth/eclipse-luna/">separate yum repository</a>, which must be configured by clicking on <a href="http://copr-be.cloud.fedoraproject.org/results/mbooth/eclipse-luna/fedora-20-x86_64/eclipse-luna-1.0-12.fc21/eclipse-luna-release-1.0-12.fc20.noarch.rpm">this link</a> to install the <a href="http://copr-be.cloud.fedoraproject.org/results/mbooth/eclipse-luna/fedora-20-x86_64/eclipse-luna-1.0-12.fc21/eclipse-luna-release-1.0-12.fc20.noarch.rpm">release package</a>.</p>
 <p>Then you can install the whole collection by doing:</p>
-<div class="highlight"><pre><span></span><span class="gp">$</span> sudo yum install eclipse-luna
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="gp">$</span> sudo yum install eclipse-luna
+</code></pre></div>
 
 
 <p>This will install everything you need to run Eclipse Luna (including a bunch of useful plug-ins for Java and C/C++ development) on your Fedora 20 machine. After installation is complete, you may notice Eclipse Luna's shiny new icon appear next to the old one in GNOME.</p>
 <p><img alt="Luna Launcher" src="//blog.matbooth.co.uk/images/eclipse-luna-f20-launcher.png"></p>
 <p>Alternatively, if you ever need to launch Eclipse from a terminal, you can do so with the following command:</p>
-<div class="highlight"><pre><span></span><span class="gp">$</span> scl <span class="nb">enable</span> eclipse-luna eclipse
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="gp">$</span> scl <span class="nb">enable</span> eclipse-luna eclipse
+</code></pre></div>
 
 
 <p>And that will launch the specific version of Eclipse from the Eclipse Luna software collection instead of the default Eclipse that comes with Fedora 20.</p>

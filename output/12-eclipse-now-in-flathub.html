@@ -9,7 +9,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic <strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic<strong>A Linux, coding and DIY blog.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/tag/fedora.html">Fedora</a></li>
                     <li><a href="/tag/eclipse.html">Eclipse</a></li>
@@ -65,18 +65,18 @@
 <p>Having such a predictable runtime environment for Eclipse will also help a great deal in diagnosing reported problems. A consistent Flatpak runtime across Linux distributions will greatly reduce the chances that we are bitten, for example, by Ubuntu-specific bugs that cannot be reproduced on Fedora.</p>
 <h2>TL;DR - Instructions for the Impatient</h2>
 <p>Enable the Flathub repository:</p>
-<div class="highlight"><pre><span></span>$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-</pre></div>
+<div class="highlight"><pre><span></span><code>$ <span class="nv">flatpak</span> <span class="nv">remote</span><span class="o">-</span><span class="nv">add</span> <span class="o">--</span><span class="k">if</span><span class="o">-</span><span class="nv">not</span><span class="o">-</span><span class="nv">exists</span> <span class="nv">flathub</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">flathub</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">repo</span><span class="o">/</span><span class="nv">flathub</span>.<span class="nv">flatpakrepo</span>
+</code></pre></div>
 
 
 <p>Install the IDE:</p>
-<div class="highlight"><pre><span></span>$ flatpak install flathub org.eclipse.Java
-</pre></div>
+<div class="highlight"><pre><span></span><code>$ flatpak install flathub org.eclipse.Java
+</code></pre></div>
 
 
 <p>Or:</p>
-<div class="highlight"><pre><span></span>$ flatpak install flathub org.eclipse.Committers
-</pre></div>
+<div class="highlight"><pre><span></span><code>$ flatpak install flathub org.eclipse.Committers
+</code></pre></div>
 
 
 <h2>Bugs?</h2>

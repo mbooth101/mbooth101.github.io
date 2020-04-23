@@ -7,7 +7,7 @@ Slug: 12-eclipse-now-in-flathub
 Author: Mat Booth
 Summary: How to get the latest release of Eclipse from Flathub.
 
-![Eclipse IDE Logo]({filename}/images/eclipse-logo.jpg)
+![Eclipse IDE Logo]({static}/images/eclipse-logo.jpg)
 
 Good news! Eclipse 2019-12 is now available from [Flathub](https://flathub.org/apps/search/eclipse%20ide), the central application repository for Flatpak applications. Two flavours of Eclipse IDE are now available from Flathub:
 
