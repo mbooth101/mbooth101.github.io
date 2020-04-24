@@ -3,27 +3,26 @@
 <head>
         <meta charset="utf-8" />
         <title>Eclipse and Handling Content Types on Linux</title>
-        <link rel="stylesheet" href="//blog.matbooth.co.uk/theme/css/main.css" />
-        <link href="//blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
+        <link rel="stylesheet" href="http://blog.matbooth.co.uk/theme/css/main.css" />
+        <link href="http://blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="//blog.matbooth.co.uk/">Mat's Blog-O-Matic<strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <h1><a href="http://blog.matbooth.co.uk/">Mat's Blog-O-Matic<strong>A Linux, coding and DIY blog.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/tag/fedora.html">Fedora</a></li>
                     <li><a href="/tag/eclipse.html">Eclipse</a></li>
                     <li><a href="/tag/diy.html">DIY</a></li>
-                    <li><a href="//blog.matbooth.co.uk/pages/about-mat-booth.html">About Mat Booth</a></li>
+                    <li><a href="http://blog.matbooth.co.uk/pages/about-mat-booth.html">About Mat Booth</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="//blog.matbooth.co.uk/13-eclipse-handling-content-types.html" rel="bookmark"
+        <a href="http://blog.matbooth.co.uk/13-eclipse-handling-content-types.html" rel="bookmark"
            title="Permalink to Eclipse and Handling Content Types on Linux">Eclipse and Handling Content Types on Linux</a></h1>
-<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="FOSS_mbooth">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     </header>
 
     <div class="entry-content">
@@ -37,13 +36,13 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="//blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
+                By                         <a class="url fn" href="http://blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
         </address>
-<p>In <a href="//blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
-<p>tags: <a href="//blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
+<p>In <a href="http://blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="http://blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="http://blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
 </footer><!-- /.post-info -->      <p>One of the ways we achieve nice desktop integration on Linux by packaging Eclipse in RPMs or as a Flatpak application is by providing a desktop entry file (using the Freedesktop <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/">Desktop Entry Specification</a>) to allow desktop environments to list Eclipse in their application launchers and menus.</p>
 <p>In this file we may also declare what content types Eclipse supports so that we also get nice integration with file managers. This results in users discovering that files may be edited with Eclipse before they even start up their IDE. For example, if you install the <a href="https://flathub.org/apps/details/org.eclipse.Java">Flatpak version of Eclipse</a>, you may now see this nice context menu entry when you right-click on Java, Maven POM or Gradle Build files:</p>
-<p><img alt="Open with Eclipse" src="//blog.matbooth.co.uk/images/open_with.png"></p>
+<p><img alt="Open with Eclipse" src="http://blog.matbooth.co.uk/images/open_with.png"></p>
 <p>However there seems to be (surprisingly to me, at least) no Freedesktop standard way to do any post-installation manipulation of the information supplied by desktop entry files; an application that has the ability to install plug-ins through it's own integral Marketplace client like Eclipse does has no ability to tell the host system about the new content type support that new plug-ins add.</p>
 <p>Apparently this is not really a common use-case, and applications generally do one of two things:</p>
 <h2>Thing 1 (Be Greedy)</h2>
@@ -75,7 +74,7 @@
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="//blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/mbooth101">github</a></li>
                             <li><a href="https://twitter.com/FOSS_mbooth">twitter</a></li>

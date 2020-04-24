@@ -1,4 +1,3 @@
-#!/usr/bin/python2
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
@@ -10,7 +9,13 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = '//blog.matbooth.co.uk'
+# If your site is available via HTTPS, make sure SITEURL begins with https://
+SITEURL = 'http://blog.matbooth.co.uk'
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
+
+# Following items are often useful when publishing
+
+#DISQUS_SITENAME = ""
+#GOOGLE_ANALYTICS = ""
