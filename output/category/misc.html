@@ -47,11 +47,11 @@
 
 <p>All of these bundles are available in the <strong>Equinox SDK</strong> zip file available from the <a href="https://download.eclipse.org/equinox/">Equinox Downloads</a> site. As of writing the latest release is <a href="https://download.eclipse.org/equinox/drops/R-4.15-202003050155/download.php?dropFile=equinox-SDK-4.15.zip">Equinox SDK 4.15</a>.</p>
 <p>Extract these bundles into a directory, then inside that directory create a <code>configuration/config.ini</code> file with the following content:</p>
-<div class="highlight"><pre><span></span><code><span class="n">osgi</span><span class="p">.</span><span class="n">bundles</span><span class="o">=</span><span class="err">\</span>
-    <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">runtime</span><span class="p">,</span><span class="err">\</span>
-    <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">command</span><span class="p">,</span><span class="err">\</span>
-    <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">shell</span><span class="p">,</span><span class="err">\</span>
-    <span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">equinox</span><span class="p">.</span><span class="n">console</span>
+<div class="highlight"><pre><span></span><code><span class="na">osgi.bundles</span><span class="o">=</span><span class="s">\</span>
+<span class="s">    org.apache.felix.gogo.runtime,\</span>
+<span class="s">    org.apache.felix.gogo.command,\</span>
+<span class="s">    org.apache.felix.gogo.shell,\</span>
+<span class="s">    org.eclipse.equinox.console</span>
 </code></pre></div>
 
 
@@ -101,7 +101,7 @@
 
 <p>Notice the use of the <code>disconnect</code> command this time, which allows you to end the console session without causing Equinox to exit. You can of course still use <code>exit</code> if you wish to terminate Equinox remotely.</p>
 <p>You may also set the port in the <code>configuration/config.ini</code> file with the addition of this line:</p>
-<div class="highlight"><pre><span></span><code><span class="n">osgi</span><span class="p">.</span><span class="n">console</span><span class="o">=</span><span class="mi">1234</span>
+<div class="highlight"><pre><span></span><code><span class="na">osgi.console</span><span class="o">=</span><span class="s">1234</span>
 </code></pre></div>
 
 
@@ -122,17 +122,17 @@
 
 <p>All of these bundles are available in the <strong>Equinox SDK</strong> zip file available from the <a href="https://download.eclipse.org/equinox/">Equinox Downloads</a> site. As of writing the latest release is <a href="https://download.eclipse.org/equinox/drops/R-4.15-202003050155/download.php?dropFile=equinox-SDK-4.15.zip">Equinox SDK 4.15</a>.</p>
 <p>Extract these bundles into a directory, then inside that directory create a <code>configuration/config.ini</code> file with the following content:</p>
-<div class="highlight"><pre><span></span><code><span class="n">osgi</span><span class="p">.</span><span class="n">bundles</span><span class="o">=</span><span class="err">\</span><span class="w"></span>
-<span class="w">    </span><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">runtime</span><span class="p">,</span><span class="err">\</span><span class="w"></span>
-<span class="w">    </span><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">command</span><span class="p">,</span><span class="err">\</span><span class="w"></span>
-<span class="w">    </span><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">shell</span><span class="p">,</span><span class="err">\</span><span class="w"></span>
-<span class="w">    </span><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">sshd</span><span class="p">.</span><span class="n">osgi</span><span class="p">,</span><span class="err">\</span><span class="w"></span>
-<span class="w">    </span><span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">equinox</span><span class="p">.</span><span class="n">console</span><span class="p">,</span><span class="err">\</span><span class="w"></span>
-<span class="w">    </span><span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">equinox</span><span class="p">.</span><span class="n">console</span><span class="p">.</span><span class="n">jaas</span><span class="p">.</span><span class="n">fragment</span><span class="p">,</span><span class="err">\</span><span class="w"></span>
-<span class="w">    </span><span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">equinox</span><span class="p">.</span><span class="n">console</span><span class="p">.</span><span class="n">ssh</span><span class="nv">@start</span><span class="p">,</span><span class="err">\</span><span class="w"></span>
-<span class="w">    </span><span class="n">org</span><span class="p">.</span><span class="n">slf4j</span><span class="p">.</span><span class="n">api</span><span class="w"></span>
-<span class="n">osgi</span><span class="p">.</span><span class="n">console</span><span class="p">.</span><span class="n">ssh</span><span class="o">=</span><span class="mf">127.0.0.1</span><span class="err">:</span><span class="mi">1234</span><span class="w"></span>
-<span class="n">osgi</span><span class="p">.</span><span class="n">console</span><span class="p">.</span><span class="n">ssh</span><span class="p">.</span><span class="n">useDefaultSecureStorage</span><span class="o">=</span><span class="k">true</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="na">osgi.bundles</span><span class="o">=</span><span class="s">\</span>
+<span class="s">    org.apache.felix.gogo.runtime,\</span>
+<span class="s">    org.apache.felix.gogo.command,\</span>
+<span class="s">    org.apache.felix.gogo.shell,\</span>
+<span class="s">    org.apache.sshd.osgi,\</span>
+<span class="s">    org.eclipse.equinox.console,\</span>
+<span class="s">    org.eclipse.equinox.console.jaas.fragment,\</span>
+<span class="s">    org.eclipse.equinox.console.ssh@start,\</span>
+<span class="s">    org.slf4j.api</span>
+<span class="na">osgi.console.ssh</span><span class="o">=</span><span class="s">127.0.0.1:1234</span>
+<span class="na">osgi.console.ssh.useDefaultSecureStorage</span><span class="o">=</span><span class="s">true</span>
 </code></pre></div>
 
 
@@ -209,8 +209,8 @@ $ <span class="nv">cat</span> <span class="o">~/</span>.<span class="nv">ssh</sp
 
 
 <p>Next you will need to remove the following line from your <code>configuration/config.ini</code> file:</p>
-<div class="highlight"><pre><span></span><code><span class="o">#</span> <span class="n">Remove</span> <span class="n">this</span> <span class="n">line</span>
-<span class="n">osgi</span><span class="p">.</span><span class="n">console</span><span class="p">.</span><span class="n">ssh</span><span class="p">.</span><span class="n">useDefaultSecureStorage</span><span class="o">=</span><span class="k">true</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Remove this line</span>
+<span class="na">osgi.console.ssh.useDefaultSecureStorage</span><span class="o">=</span><span class="s">true</span>
 </code></pre></div>
 
 

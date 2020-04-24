@@ -6,6 +6,7 @@ Tags: diy
 Slug: 15-project-lockdown-aviary-build
 Author: Mat Booth
 Summary: The country is in lockdown, I'm on PTO, my vacation was cancelled and I can't leave the house. However, the weather is glorious, I can be in the garden, the postie is still working and Amazon is delivering. It was the only sensible thing I could do. I bought a welder and built some stuff.
+Status: draft
 
 The country is in lockdown, I'm on PTO, my vacation was cancelled and I can't leave the house. However, the weather is glorious, I can be in the garden, the postie is still working and Amazon is delivering. It was the only sensible thing I could do. I bought a welder and built some stuff.
 

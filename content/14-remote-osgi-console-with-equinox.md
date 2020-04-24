@@ -25,6 +25,7 @@ All of these bundles are available in the **Equinox SDK** zip file available fro
 Extract these bundles into a directory, then inside that directory create a ```configuration/config.ini``` file with the following content:
 
 ```
+:::ini
 osgi.bundles=\
     org.apache.felix.gogo.runtime,\
     org.apache.felix.gogo.command,\
@@ -85,6 +86,7 @@ Notice the use of the ```disconnect``` command this time, which allows you to en
 You may also set the port in the ```configuration/config.ini``` file with the addition of this line:
 
 ```
+:::ini
 osgi.console=1234
 ```
 
@@ -111,6 +113,7 @@ All of these bundles are available in the **Equinox SDK** zip file available fro
 Extract these bundles into a directory, then inside that directory create a ```configuration/config.ini``` file with the following content:
 
 ```
+:::ini
 osgi.bundles=\
     org.apache.felix.gogo.runtime,\
     org.apache.felix.gogo.command,\
@@ -208,6 +211,7 @@ $ cat ~/.ssh/equinox.pub > configuration/equinox_authorized_keys
 Next you will need to remove the following line from your ```configuration/config.ini``` file:
 
 ```
+:::ini
 # Remove this line
 osgi.console.ssh.useDefaultSecureStorage=true
 ```
