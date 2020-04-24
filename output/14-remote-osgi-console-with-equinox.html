@@ -43,11 +43,11 @@
 <p>tags: <a href="//blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
 </footer><!-- /.post-info -->      <p>You may be familiar with the OSGi shell you get when you pass the <code>-console</code> option to Equinox on the command line. Did you know you can also use this console over Telnet sessions or SSH sessions? This article shows you the bare minimum needed to do so.</p>
 <p>To recap, the minimal bundle set needed to start Equinox with the console is as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">command_1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="n">v20170914</span><span class="o">-</span><span class="mi">1324</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">runtime_1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="n">v20180713</span><span class="o">-</span><span class="mi">1646</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">shell_1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="n">v20180713</span><span class="o">-</span><span class="mi">1646</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">equinox</span><span class="p">.</span><span class="n">console_1</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="n">v20190819</span><span class="o">-</span><span class="mi">1430</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">osgi_3</span><span class="p">.</span><span class="mi">15</span><span class="p">.</span><span class="mi">200</span><span class="p">.</span><span class="n">v20200214</span><span class="o">-</span><span class="mi">1600</span><span class="p">.</span><span class="n">jar</span>
+<div class="highlight"><pre><span></span><code>org.apache.felix.gogo.command_1.0.2.v20170914-1324.jar
+org.apache.felix.gogo.runtime_1.1.0.v20180713-1646.jar
+org.apache.felix.gogo.shell_1.1.0.v20180713-1646.jar
+org.eclipse.equinox.console_1.4.0.v20190819-1430.jar
+org.eclipse.osgi_3.15.200.v20200214-1600.jar
 </code></pre></div>
 
 
@@ -62,46 +62,46 @@
 
 
 <p>Now you can start this minimal Equinox, with console, by passing the <code>-console</code> option, for example:</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nv">java</span> <span class="o">-</span><span class="nv">jar</span> <span class="nv">org</span>.<span class="nv">eclipse</span>.<span class="nv">osgi_</span><span class="o">*</span>.<span class="nv">jar</span> <span class="o">-</span><span class="nv">console</span>
-<span class="nv">osgi</span><span class="o">&gt;</span> <span class="nv">ss</span>
-<span class="s2">&quot;</span><span class="s">Framework is launched.</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code>$ java -jar org.eclipse.osgi_*.jar -console
+osgi&gt; ss
+&quot;Framework is launched.&quot;
 
 
-<span class="nv">id</span>      <span class="nv">State</span>       <span class="nv">Bundle</span>
-<span class="mi">0</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">eclipse</span>.<span class="nv">osgi_3</span>.<span class="mi">15</span>.<span class="mi">200</span>.<span class="nv">v20200214</span><span class="o">-</span><span class="mi">1600</span>
-<span class="mi">1</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">apache</span>.<span class="nv">felix</span>.<span class="nv">gogo</span>.<span class="nv">runtime_1</span>.<span class="mi">1</span>.<span class="mi">0</span>.<span class="nv">v20180713</span><span class="o">-</span><span class="mi">1646</span>
-<span class="mi">2</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">apache</span>.<span class="nv">felix</span>.<span class="nv">gogo</span>.<span class="nv">command_1</span>.<span class="mi">0</span>.<span class="mi">2</span>.<span class="nv">v20170914</span><span class="o">-</span><span class="mi">1324</span>
-<span class="mi">3</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">apache</span>.<span class="nv">felix</span>.<span class="nv">gogo</span>.<span class="nv">shell_1</span>.<span class="mi">1</span>.<span class="mi">0</span>.<span class="nv">v20180713</span><span class="o">-</span><span class="mi">1646</span>
-<span class="mi">4</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">eclipse</span>.<span class="nv">equinox</span>.<span class="nv">console_1</span>.<span class="mi">4</span>.<span class="mi">0</span>.<span class="nv">v20190819</span><span class="o">-</span><span class="mi">1430</span>
-<span class="nv">osgi</span><span class="o">&gt;</span> <span class="k">exit</span>
-<span class="nv">Really</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">stop</span> <span class="nv">Equinox</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">n</span><span class="c1">; default=y)  </span>
+id      State       Bundle
+0       ACTIVE      org.eclipse.osgi_3.15.200.v20200214-1600
+1       ACTIVE      org.apache.felix.gogo.runtime_1.1.0.v20180713-1646
+2       ACTIVE      org.apache.felix.gogo.command_1.0.2.v20170914-1324
+3       ACTIVE      org.apache.felix.gogo.shell_1.1.0.v20180713-1646
+4       ACTIVE      org.eclipse.equinox.console_1.4.0.v20190819-1430
+osgi&gt; exit
+Really want to stop Equinox? (y/n; default=y)  
 </code></pre></div>
 
 
 <h3>Over Telnet</h3>
 <p>Starting the console in a Telnet session instead is very easy, you just need to pass a port number with the <code>-console</code> option, for example:</p>
-<div class="highlight"><pre><span></span><code>$ java -jar org.eclipse.osgi_*.jar -console <span class="m">1234</span>
+<div class="highlight"><pre><span></span><code>$ java -jar org.eclipse.osgi_*.jar -console 1234
 </code></pre></div>
 
 
 <p>From another terminal, you can then connect to the Telnet session like this, using the port you specified above:</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nv">telnet</span> <span class="nv">localhost</span> <span class="mi">1234</span>
-<span class="nv">Trying</span> ::<span class="mi">1</span>...
-<span class="nv">Connected</span> <span class="nv">to</span> <span class="nv">localhost</span>.
-<span class="nv">Escape</span> <span class="nv">character</span> <span class="nv">is</span> <span class="s1">&#39;</span><span class="s">^]</span><span class="s1">&#39;</span>.
-<span class="nv">osgi</span><span class="o">&gt;</span> <span class="nv">ss</span>
-<span class="s2">&quot;</span><span class="s">Framework is launched.</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code>$ telnet localhost 1234
+Trying ::1...
+Connected to localhost.
+Escape character is &#39;^]&#39;.
+osgi&gt; ss
+&quot;Framework is launched.&quot;
 
 
-<span class="nv">id</span>      <span class="nv">State</span>       <span class="nv">Bundle</span>
-<span class="mi">0</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">eclipse</span>.<span class="nv">osgi_3</span>.<span class="mi">15</span>.<span class="mi">200</span>.<span class="nv">v20200214</span><span class="o">-</span><span class="mi">1600</span>
-<span class="mi">1</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">apache</span>.<span class="nv">felix</span>.<span class="nv">gogo</span>.<span class="nv">runtime_1</span>.<span class="mi">1</span>.<span class="mi">0</span>.<span class="nv">v20180713</span><span class="o">-</span><span class="mi">1646</span>
-<span class="mi">2</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">apache</span>.<span class="nv">felix</span>.<span class="nv">gogo</span>.<span class="nv">command_1</span>.<span class="mi">0</span>.<span class="mi">2</span>.<span class="nv">v20170914</span><span class="o">-</span><span class="mi">1324</span>
-<span class="mi">3</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">apache</span>.<span class="nv">felix</span>.<span class="nv">gogo</span>.<span class="nv">shell_1</span>.<span class="mi">1</span>.<span class="mi">0</span>.<span class="nv">v20180713</span><span class="o">-</span><span class="mi">1646</span>
-<span class="mi">4</span>       <span class="nv">ACTIVE</span>      <span class="nv">org</span>.<span class="nv">eclipse</span>.<span class="nv">equinox</span>.<span class="nv">console_1</span>.<span class="mi">4</span>.<span class="mi">0</span>.<span class="nv">v20190819</span><span class="o">-</span><span class="mi">1430</span>
-<span class="nv">osgi</span><span class="o">&gt;</span> <span class="k">disconnect</span>
-<span class="k">Disconnect</span> <span class="nv">from</span> <span class="nv">console</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">n</span><span class="c1">; default=y) </span>
-<span class="nv">Connection</span> <span class="nv">closed</span> <span class="nv">by</span> <span class="nv">foreign</span> <span class="nv">host</span>.
+id      State       Bundle
+0       ACTIVE      org.eclipse.osgi_3.15.200.v20200214-1600
+1       ACTIVE      org.apache.felix.gogo.runtime_1.1.0.v20180713-1646
+2       ACTIVE      org.apache.felix.gogo.command_1.0.2.v20170914-1324
+3       ACTIVE      org.apache.felix.gogo.shell_1.1.0.v20180713-1646
+4       ACTIVE      org.eclipse.equinox.console_1.4.0.v20190819-1430
+osgi&gt; disconnect
+Disconnect from console? (y/n; default=y) 
+Connection closed by foreign host.
 </code></pre></div>
 
 
@@ -114,15 +114,15 @@
 <p>And that will start the console as a Telnet session automatically on port 1234 without needing to pass <code>-console</code> at all, but if you do pass <code>-console</code> it will override any setting you have in the <code>configuration/config.ini</code> file.</p>
 <h3>Over SSH</h3>
 <p>To start a console session in an SSH session, a few more bundles are needed:</p>
-<div class="highlight"><pre><span></span><code><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">command_1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="n">v20170914</span><span class="o">-</span><span class="mi">1324</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">runtime_1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="n">v20180713</span><span class="o">-</span><span class="mi">1646</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">felix</span><span class="p">.</span><span class="n">gogo</span><span class="p">.</span><span class="n">shell_1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="n">v20180713</span><span class="o">-</span><span class="mi">1646</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">sshd</span><span class="p">.</span><span class="n">osgi_2</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="n">v20200318</span><span class="o">-</span><span class="mi">1614</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">equinox</span><span class="p">.</span><span class="n">console_1</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="n">v20190819</span><span class="o">-</span><span class="mi">1430</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">equinox</span><span class="p">.</span><span class="n">console</span><span class="p">.</span><span class="n">jaas</span><span class="p">.</span><span class="n">fragment_1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">300</span><span class="p">.</span><span class="n">v20200111</span><span class="o">-</span><span class="mi">0718</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">equinox</span><span class="p">.</span><span class="n">console</span><span class="p">.</span><span class="n">ssh</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">600</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">osgi_3</span><span class="p">.</span><span class="mi">15</span><span class="p">.</span><span class="mi">200</span><span class="p">.</span><span class="n">v20200214</span><span class="o">-</span><span class="mi">1600</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">org</span><span class="p">.</span><span class="n">slf4j</span><span class="p">.</span><span class="n">api_1</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="n">v20121108</span><span class="o">-</span><span class="mi">1250</span><span class="p">.</span><span class="n">jar</span>
+<div class="highlight"><pre><span></span><code>org.apache.felix.gogo.command_1.0.2.v20170914-1324.jar
+org.apache.felix.gogo.runtime_1.1.0.v20180713-1646.jar
+org.apache.felix.gogo.shell_1.1.0.v20180713-1646.jar
+org.apache.sshd.osgi_2.4.0.v20200318-1614.jar
+org.eclipse.equinox.console_1.4.0.v20190819-1430.jar
+org.eclipse.equinox.console.jaas.fragment_1.0.300.v20200111-0718.jar
+org.eclipse.equinox.console.ssh-1.2.600-SNAPSHOT.jar
+org.eclipse.osgi_3.15.200.v20200214-1600.jar
+org.slf4j.api_1.7.2.v20121108-1250.jar
 </code></pre></div>
 
 
@@ -143,74 +143,74 @@
 
 
 <p>Equinox uses <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html">JAAS</a> to authenticate SSH sessions, the default provider of which must be configured by creating a JAAS configuration file, for example <code>configuration/console.authentication.config</code> with the following content:</p>
-<div class="highlight"><pre><span></span><code><span class="n">equinox_console</span> <span class="err">{</span>
-    <span class="n">org</span><span class="p">.</span><span class="n">eclipse</span><span class="p">.</span><span class="n">equinox</span><span class="p">.</span><span class="n">console</span><span class="p">.</span><span class="n">jaas</span><span class="p">.</span><span class="n">SecureStorageLoginModule</span> <span class="n">REQUIRED</span><span class="p">;</span>
-<span class="err">}</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code>equinox_console {
+    org.eclipse.equinox.console.jaas.SecureStorageLoginModule REQUIRED;
+};
 </code></pre></div>
 
 
 <p>Then when starting Equinox you need to tell it where the JAAS configuration is by setting the <code>java.security.auth.login.config</code> system property. The default JAAS implementation stores its credentials in a file you must specify with the <code>org.eclipse.equinox.console.jaas.file</code> system property:</p>
-<div class="highlight"><pre><span></span><code>$ java -Dssh.server.keystore<span class="o">=</span>configuration/hostkey.ser <span class="se">\</span>
-       -Dorg.eclipse.equinox.console.jaas.file<span class="o">=</span>configuration/store <span class="se">\</span>
-       -Djava.security.auth.login.config<span class="o">=</span>configuration/console.authentication.config -jar org.eclipse.osgi_*.jar
+<div class="highlight"><pre><span></span><code>$ java -Dssh.server.keystore=configuration/hostkey.ser \
+       -Dorg.eclipse.equinox.console.jaas.file=configuration/store \
+       -Djava.security.auth.login.config=configuration/console.authentication.config -jar org.eclipse.osgi_*.jar
 </code></pre></div>
 
 
 <p>The default JAAS provider creates one default user account with username/password credentials of equinox/equinox. After you log in with these credentials, you will be prompted to create a new account and the default account will be removed.</p>
 <p>Once Equinox is started, from another terminal you can connect to the SSH session like this:</p>
-<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">p</span> <span class="mi">1234</span> <span class="n">equinox</span><span class="mf">@127.0.0.1</span>
-<span class="n">The</span> <span class="n">authenticity</span> <span class="n">of</span> <span class="n">host</span> <span class="err">&#39;</span><span class="p">[</span><span class="mf">127.0.0.1</span><span class="p">]</span><span class="o">:</span><span class="mi">1234</span> <span class="p">([</span><span class="mf">127.0.0.1</span><span class="p">]</span><span class="o">:</span><span class="mi">1234</span><span class="p">)</span><span class="err">&#39;</span> <span class="n">can</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">be</span> <span class="n">established</span><span class="p">.</span>
-<span class="n">RSA</span> <span class="n">key</span> <span class="n">fingerprint</span> <span class="n">is</span> <span class="nl">SHA256</span><span class="p">:</span><span class="mi">7</span><span class="n">x3eOsDRM5lyL5vRsVREy8hIawIfqRiZ7CBnk6GkfRA</span><span class="p">.</span>
-<span class="n">Are</span> <span class="n">you</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="k">continue</span> <span class="n">connecting</span> <span class="p">(</span><span class="n">yes</span><span class="o">/</span><span class="n">no</span><span class="o">/</span><span class="p">[</span><span class="n">fingerprint</span><span class="p">])</span><span class="o">?</span> <span class="n">yes</span>
-<span class="nl">Warning</span><span class="p">:</span> <span class="n">Permanently</span> <span class="n">added</span> <span class="err">&#39;</span><span class="p">[</span><span class="mf">127.0.0.1</span><span class="p">]</span><span class="o">:</span><span class="mi">1234</span><span class="err">&#39;</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span> <span class="n">to</span> <span class="n">the</span> <span class="n">list</span> <span class="n">of</span> <span class="n">known</span> <span class="n">hosts</span><span class="p">.</span>
-<span class="n">Password</span> <span class="n">authentication</span>
-<span class="nl">Password</span><span class="p">:</span> 
-<span class="n">Currently</span> <span class="n">the</span> <span class="k">default</span> <span class="n">user</span> <span class="n">is</span> <span class="n">the</span> <span class="n">only</span> <span class="n">one</span><span class="p">;</span> <span class="n">since</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">deleted</span> <span class="n">after</span> <span class="n">first</span> <span class="n">login</span><span class="p">,</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="nl">user</span><span class="p">:</span>
-<span class="nl">username</span><span class="p">:</span> <span class="n">mbooth</span>
-<span class="nl">password</span><span class="p">:</span> 
-<span class="n">Confirm</span> <span class="nl">password</span><span class="p">:</span> 
-<span class="nl">roles</span><span class="p">:</span> <span class="n">admin</span>
-<span class="n">osgi</span><span class="o">&gt;</span> <span class="n">disconnect</span>
-<span class="n">Disconnect</span> <span class="n">from</span> <span class="n">console</span><span class="o">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">;</span> <span class="k">default</span><span class="o">=</span><span class="n">y</span><span class="p">)</span> 
-<span class="n">Connection</span> <span class="n">to</span> <span class="mf">127.0.0.1</span> <span class="n">closed</span><span class="p">.</span>
+<div class="highlight"><pre><span></span><code>$ ssh -p 1234 equinox@127.0.0.1
+The authenticity of host &#39;[127.0.0.1]:1234 ([127.0.0.1]:1234)&#39; can&#39;t be established.
+RSA key fingerprint is SHA256:7x3eOsDRM5lyL5vRsVREy8hIawIfqRiZ7CBnk6GkfRA.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added &#39;[127.0.0.1]:1234&#39; (RSA) to the list of known hosts.
+Password authentication
+Password: 
+Currently the default user is the only one; since it will be deleted after first login, create a new user:
+username: mbooth
+password: 
+Confirm password: 
+roles: admin
+osgi&gt; disconnect
+Disconnect from console? (y/n; default=y) 
+Connection to 127.0.0.1 closed.
 </code></pre></div>
 
 
 <p>On subsequent connections you will be required to supply the newly created credentials:</p>
-<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">p</span> <span class="mi">1234</span> <span class="n">mbooth</span><span class="mf">@127.0.0.1</span>
-<span class="n">Password</span> <span class="n">authentication</span>
-<span class="nl">Password</span><span class="p">:</span> 
-<span class="n">osgi</span><span class="o">&gt;</span> <span class="n">disconnect</span>
-<span class="n">Disconnect</span> <span class="n">from</span> <span class="n">console</span><span class="o">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">;</span> <span class="k">default</span><span class="o">=</span><span class="n">y</span><span class="p">)</span> 
-<span class="n">Connection</span> <span class="n">to</span> <span class="mf">127.0.0.1</span> <span class="n">closed</span><span class="p">.</span>
+<div class="highlight"><pre><span></span><code>$ ssh -p 1234 mbooth@127.0.0.1
+Password authentication
+Password: 
+osgi&gt; disconnect
+Disconnect from console? (y/n; default=y) 
+Connection to 127.0.0.1 closed.
 </code></pre></div>
 
 
 <p>Once logged in there are various commands for managing user accounts, passwords and roles. Type <code>help</code> at the OSGi console prompt to find out about these commands. It is possible to implement custom JAAS providers that can use different credential stores, but that is out of the scope of this article.</p>
 <h3>Public Key Authentication</h3>
 <p>It's common to want to use public key authentication with SSH and you may configure Equinox to do that instead of using JAAS authentication. First create your SSH key-pair as normal and create a file that contains the list of authorised keys that Equinox should consult when you attempt to connect:</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nv">ssh</span><span class="o">-</span><span class="nv">keygen</span> <span class="o">-</span><span class="nv">f</span> <span class="o">~/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">equinox</span>
-<span class="nv">Generating</span> <span class="nv">public</span><span class="o">/</span><span class="nv">private</span> <span class="nv">rsa</span> <span class="nv">key</span> <span class="nv">pair</span>.
-<span class="nv">Enter</span> <span class="nv">passphrase</span> <span class="ss">(</span><span class="nv">empty</span> <span class="k">for</span> <span class="nv">no</span> <span class="nv">passphrase</span><span class="ss">)</span>: 
-<span class="nv">Enter</span> <span class="nv">same</span> <span class="nv">passphrase</span> <span class="nv">again</span>: 
-<span class="nv">Your</span> <span class="nv">identification</span> <span class="nv">has</span> <span class="nv">been</span> <span class="nv">saved</span> <span class="nv">in</span> <span class="o">/</span><span class="nv">home</span><span class="o">/</span><span class="nv">mbooth</span><span class="o">/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">equinox</span>
-<span class="nv">Your</span> <span class="nv">public</span> <span class="nv">key</span> <span class="nv">has</span> <span class="nv">been</span> <span class="nv">saved</span> <span class="nv">in</span> <span class="o">/</span><span class="nv">home</span><span class="o">/</span><span class="nv">mbooth</span><span class="o">/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">equinox</span>.<span class="nv">pub</span>
-<span class="nv">The</span> <span class="nv">key</span> <span class="nv">fingerprint</span> <span class="nv">is</span>:
-<span class="nv">SHA256</span>:<span class="mi">0</span><span class="nv">k7MSbLLzhhzI7Gw6oSYEx8Fv5UpNHMPTdOUDj8rplQ</span> <span class="nv">mbooth</span>@<span class="nv">thinkpad</span><span class="o">-</span><span class="nv">p50</span>
-<span class="nv">The</span> <span class="nv">key</span><span class="s1">&#39;</span><span class="s">s randomart image is:</span>
-<span class="o">+---</span>[<span class="nv">RSA</span> <span class="mi">3072</span>]<span class="o">----+</span>
-<span class="o">|</span>  . <span class="o">+</span> <span class="nv">oooo</span>..     <span class="o">|</span>
-<span class="o">|</span>   <span class="o">+</span> <span class="o">+</span> <span class="o">=</span><span class="nv">o</span>.<span class="nv">o</span>      <span class="o">|</span>
-<span class="o">|</span>    <span class="o">+</span> <span class="o">=</span> <span class="nv">o</span><span class="o">+</span>       <span class="o">|</span>
-<span class="o">|</span>   . <span class="o">+</span> <span class="nv">BE</span>.<span class="o">+</span>      <span class="o">|</span>
-<span class="o">|</span>. <span class="nv">o</span> <span class="nv">o</span> <span class="nv">o</span>.<span class="nv">S</span>  <span class="nv">o</span>     <span class="o">|</span>
-<span class="o">|</span><span class="nv">o</span><span class="o">+</span> <span class="o">+</span> <span class="o">+</span>.<span class="o">=</span><span class="nv">o</span> .      <span class="o">|</span>
-<span class="o">|=</span>.<span class="nv">o</span> <span class="o">=</span>.<span class="o">=</span><span class="nv">o</span>..       <span class="o">|</span>
-<span class="o">|</span>.<span class="nv">o</span>   <span class="nv">O</span>..         <span class="o">|</span>
-<span class="o">|</span><span class="nv">o</span>.  . <span class="nv">o</span>          <span class="o">|</span>
-<span class="o">+----</span>[<span class="nv">SHA256</span>]<span class="o">-----+</span>
+<div class="highlight"><pre><span></span><code>$ ssh-keygen -f ~/.ssh/equinox
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/mbooth/.ssh/equinox
+Your public key has been saved in /home/mbooth/.ssh/equinox.pub
+The key fingerprint is:
+SHA256:0k7MSbLLzhhzI7Gw6oSYEx8Fv5UpNHMPTdOUDj8rplQ mbooth@thinkpad-p50
+The key&#39;s randomart image is:
++---[RSA 3072]----+
+|  . + oooo..     |
+|   + + =o.o      |
+|    + = o+       |
+|   . + BE.+      |
+|. o o o.S  o     |
+|o+ + +.=o .      |
+|=.o =.=o..       |
+|.o   O..         |
+|o.  . o          |
++----[SHA256]-----+
 
-$ <span class="nv">cat</span> <span class="o">~/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">equinox</span>.<span class="nv">pub</span> <span class="o">&gt;</span> <span class="nv">configuration</span><span class="o">/</span><span class="nv">equinox_authorized_keys</span>
+$ cat ~/.ssh/equinox.pub &gt; configuration/equinox_authorized_keys
 </code></pre></div>
 
 
@@ -221,20 +221,20 @@ $ <span class="nv">cat</span> <span class="o">~/</span>.<span class="nv">ssh</sp
 
 
 <p>Now when you start Equinox, instead of telling it about the JAAS configuration, you must tell it about the authorised keys file:</p>
-<div class="highlight"><pre><span></span><code>$ java -Dssh.server.keystore<span class="o">=</span>configuration/hostkey.ser <span class="se">\</span>
-       -Dssh.server.authorized_keys<span class="o">=</span>configuration/equinox_authorized_keys -jar org.eclipse.osgi_*.jar
+<div class="highlight"><pre><span></span><code>$ java -Dssh.server.keystore=configuration/hostkey.ser \
+       -Dssh.server.authorized_keys=configuration/equinox_authorized_keys -jar org.eclipse.osgi_*.jar
 </code></pre></div>
 
 
 <p>And that allows you to use your SSH key instead of a username/password pair when connecting to the SSH console session:</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nv">ssh</span> <span class="o">-</span><span class="nv">i</span> <span class="o">~/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">equinox</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">1234</span> <span class="nv">localhost</span>
-<span class="nv">The</span> <span class="nv">authenticity</span> <span class="nv">of</span> <span class="nv">host</span> <span class="s1">&#39;</span><span class="s">[localhost]:1234 ([127.0.0.1]:1234)</span><span class="s1">&#39;</span> <span class="nv">can</span><span class="s1">&#39;</span><span class="s">t be established.</span>
-<span class="nv">RSA</span> <span class="nv">key</span> <span class="nv">fingerprint</span> <span class="nv">is</span> <span class="nv">SHA256</span>:<span class="nv">m2JKy2fRZA1aqvxHBBe</span><span class="o">+</span><span class="nv">Awsgk98ryI29fH03Rg7jeHw</span>.
-<span class="nv">Are</span> <span class="nv">you</span> <span class="nv">sure</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="k">continue</span> <span class="nv">connecting</span> <span class="ss">(</span><span class="nv">yes</span><span class="o">/</span><span class="nv">no</span><span class="o">/</span>[<span class="nv">fingerprint</span>]<span class="ss">)</span>? <span class="nv">yes</span>
-<span class="nv">Warning</span>: <span class="nv">Permanently</span> <span class="nv">added</span> <span class="s1">&#39;</span><span class="s">[localhost]:1234</span><span class="s1">&#39;</span> <span class="ss">(</span><span class="nv">RSA</span><span class="ss">)</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">list</span> <span class="nv">of</span> <span class="nv">known</span> <span class="nv">hosts</span>.
-<span class="nv">osgi</span><span class="o">&gt;</span> <span class="k">disconnect</span>
-<span class="k">Disconnect</span> <span class="nv">from</span> <span class="nv">console</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">n</span><span class="c1">; default=y) </span>
-<span class="nv">Connection</span> <span class="nv">to</span> <span class="nv">localhost</span> <span class="nv">closed</span>.
+<div class="highlight"><pre><span></span><code>$ ssh -i ~/.ssh/equinox -p 1234 localhost
+The authenticity of host &#39;[localhost]:1234 ([127.0.0.1]:1234)&#39; can&#39;t be established.
+RSA key fingerprint is SHA256:m2JKy2fRZA1aqvxHBBe+Awsgk98ryI29fH03Rg7jeHw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added &#39;[localhost]:1234&#39; (RSA) to the list of known hosts.
+osgi&gt; disconnect
+Disconnect from console? (y/n; default=y) 
+Connection to localhost closed.
 </code></pre></div>
 
 
