@@ -12,6 +12,7 @@ You may be familiar with the OSGi shell you get when you pass the ```-console```
 To recap, the minimal bundle set needed to start Equinox with the console is as follows:
 
 ```
+:::text
 org.apache.felix.gogo.command_1.0.2.v20170914-1324.jar
 org.apache.felix.gogo.runtime_1.1.0.v20180713-1646.jar
 org.apache.felix.gogo.shell_1.1.0.v20180713-1646.jar
@@ -36,6 +37,7 @@ osgi.bundles=\
 Now you can start this minimal Equinox, with console, by passing the ```-console``` option, for example:
 
 ```
+:::text
 $ java -jar org.eclipse.osgi_*.jar -console
 osgi> ss
 "Framework is launched."
@@ -56,12 +58,14 @@ Really want to stop Equinox? (y/n; default=y)
 Starting the console in a Telnet session instead is very easy, you just need to pass a port number with the ```-console``` option, for example:
 
 ```
+:::text
 $ java -jar org.eclipse.osgi_*.jar -console 1234
 ```
 
 From another terminal, you can then connect to the Telnet session like this, using the port you specified above:
 
 ```
+:::text
 $ telnet localhost 1234
 Trying ::1...
 Connected to localhost.
@@ -97,6 +101,7 @@ And that will start the console as a Telnet session automatically on port 1234 w
 To start a console session in an SSH session, a few more bundles are needed:
 
 ```
+:::text
 org.apache.felix.gogo.command_1.0.2.v20170914-1324.jar
 org.apache.felix.gogo.runtime_1.1.0.v20180713-1646.jar
 org.apache.felix.gogo.shell_1.1.0.v20180713-1646.jar
@@ -131,6 +136,7 @@ osgi.console.ssh.useDefaultSecureStorage=true
 Equinox uses [JAAS](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) to authenticate SSH sessions, the default provider of which must be configured by creating a JAAS configuration file, for example ```configuration/console.authentication.config``` with the following content:
 
 ```
+:::text
 equinox_console {
     org.eclipse.equinox.console.jaas.SecureStorageLoginModule REQUIRED;
 };
@@ -139,6 +145,7 @@ equinox_console {
 Then when starting Equinox you need to tell it where the JAAS configuration is by setting the ```java.security.auth.login.config``` system property. The default JAAS implementation stores its credentials in a file you must specify with the ```org.eclipse.equinox.console.jaas.file``` system property:
 
 ```
+:::text
 $ java -Dssh.server.keystore=configuration/hostkey.ser \
        -Dorg.eclipse.equinox.console.jaas.file=configuration/store \
        -Djava.security.auth.login.config=configuration/console.authentication.config -jar org.eclipse.osgi_*.jar
@@ -149,6 +156,7 @@ The default JAAS provider creates one default user account with username/passwor
 Once Equinox is started, from another terminal you can connect to the SSH session like this:
 
 ```
+:::text
 $ ssh -p 1234 equinox@127.0.0.1
 The authenticity of host '[127.0.0.1]:1234 ([127.0.0.1]:1234)' can't be established.
 RSA key fingerprint is SHA256:7x3eOsDRM5lyL5vRsVREy8hIawIfqRiZ7CBnk6GkfRA.
@@ -169,6 +177,7 @@ Connection to 127.0.0.1 closed.
 On subsequent connections you will be required to supply the newly created credentials:
 
 ```
+:::text
 $ ssh -p 1234 mbooth@127.0.0.1
 Password authentication
 Password: 
@@ -184,6 +193,7 @@ Once logged in there are various commands for managing user accounts, passwords 
 It's common to want to use public key authentication with SSH and you may configure Equinox to do that instead of using JAAS authentication. First create your SSH key-pair as normal and create a file that contains the list of authorised keys that Equinox should consult when you attempt to connect:
 
 ```
+:::text
 $ ssh-keygen -f ~/.ssh/equinox
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase): 
@@ -219,6 +229,7 @@ osgi.console.ssh.useDefaultSecureStorage=true
 Now when you start Equinox, instead of telling it about the JAAS configuration, you must tell it about the authorised keys file:
 
 ```
+:::text
 $ java -Dssh.server.keystore=configuration/hostkey.ser \
        -Dssh.server.authorized_keys=configuration/equinox_authorized_keys -jar org.eclipse.osgi_*.jar
 ```
@@ -226,6 +237,7 @@ $ java -Dssh.server.keystore=configuration/hostkey.ser \
 And that allows you to use your SSH key instead of a username/password pair when connecting to the SSH console session:
 
 ```
+:::text
 $ ssh -i ~/.ssh/equinox -p 1234 localhost
 The authenticity of host '[localhost]:1234 ([127.0.0.1]:1234)' can't be established.
 RSA key fingerprint is SHA256:m2JKy2fRZA1aqvxHBBe+Awsgk98ryI29fH03Rg7jeHw.

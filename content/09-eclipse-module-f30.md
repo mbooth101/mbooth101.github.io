@@ -7,7 +7,7 @@ Slug: 09-eclipse-module-f30
 Author: Mat Booth
 Summary: How to install the Eclipse IDE module on Fedora 30!
 
-![Eclipse IDE Logo]({filename}/images/eclipse-logo.jpg)
+![Eclipse IDE Logo]({static}/images/eclipse-logo.jpg)
 
 From Fedora 30 onwards, Eclipse will be available as a module for [Fedora Modularity](https://docs.fedoraproject.org/en-US/modularity/).
 
