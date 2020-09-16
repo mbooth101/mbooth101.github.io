@@ -93,7 +93,7 @@ I didn't quite grind out the deepest divets because I didn't want to remove more
 
 Once I had all the side panels and roof panels of the aviary welded up, I could start thinking about assembly. I needed to drill some holes in the box section so that it can all be bolted together. This turned out to much more of a chore than I anticipated. Stainless steel is hard as nails and the drill bits I had were not really up to the task. I had some titanium nitride (TiN) coated high-speed steel (HSS) bits for metal drilling but they required re-sharpening on the bench grinder after every single hole, even though the walls of the box section is only 1.5mm thick. If I did not resharpen the bits then the friction of the dull cutting edge would work-harden the steel and they would would just bind and break. I broke three bits in this way before I caved in and ordered some cobalt HSS bits designed for stainless, which cut the metal like butter in comparison to the others. I highly recommend getting some cobalt bits if you have to work with stainless steel.
 
-I drilled 6mm holes for M5 bolts and removed the burr by creating a slight bevel with a countersink bit:
+I drilled 6mm holes for M6 bolts and removed the burr by creating a slight bevel with a countersink bit:
 
 ![Holes. For bolts.]({static}/images/diy/15-bolt-holes.jpg)
 
@@ -109,7 +109,15 @@ Luckily since the gap is approximately one box section dimension large it should
 
 ## Day 8/9 - Welding the Mesh
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Next thing to attempt is welding the mesh to the assembled frames. Prudence once again dictated that I practice on some off-cuts first, so here's some practice welds (click to view a high-res version):
+
+<a href="{static}/images/diy/15-mesh-practice-1.jpg">![Making a mesh of it.]({static}/images/diy/15-mesh-practice-1_small.jpg)</a><a href="{static}/images/diy/15-mesh-practice-2.jpg">![Making lesh of a mesh of it.]({static}/images/diy/15-mesh-practice-2_small.jpg)</a>
+
+What I am trying to accomplish with these "tacks" is to start a puddle on the box section and then bringing the puddle over to touch the mesh wire. I must be careful to avoid putting too much heat into either the box section (and blowing a hole through it) or the mesh wire (and melting it away entirely). You can see in the above I was not quite successful in all cases, but after some practice I was able to acheive what I wanted consistently enough to start welding for real. See below for some better examples (click to view a high-res version):
+
+<a href="{static}/images/diy/15-prod-mesh.jpg">![Not making a mesh of it.]({static}/images/diy/15-prod-mesh_small.jpg)</a>
+
+Now only about a thousand of these left to do...
 
 ## Epilogue
 
