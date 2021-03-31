@@ -1,13 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-    <!--
-        Disclaimer: Before inspecting this source let it be known that I am not
-                    a web designer by trade!
-    -->
 	<title>Matthew James Booth</title>
-	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
 	<meta name="description" content="Matthew James Booth's CV/Resumé." />
 	<link rel="shortcut icon" type="image/x-icon" href="http://people.apache.org/favicon.ico" />
 	<style type="text/css">
@@ -24,9 +19,9 @@ p  {text-align: justify;                margin: 10px 0px;}
 {
 	.noprint {display: none;}
 
-	a:link, a:visited {color: #000000; text-decoration: none;}
-	a:hover           {color: #000000; text-decoration: none;}
-	.break            {page-break-before: always;}
+	a:link, a:visited {color: #000000; text-decoration: underline;}
+	a:hover           {color: #000000; text-decoration: underline;}
+	.break            {break-after: always;}
 }
 
 @media screen
@@ -35,24 +30,23 @@ p  {text-align: justify;                margin: 10px 0px;}
 
 	a:link, a:visited {color: #800000; text-decoration: underline;}
 	a:hover           {color: #FF0000; text-decoration: underline;}
-	.break            {display: none;}
 }
 
 table {width: 750px; margin: .25em 0;
 	   border-collapse: collapse; border: 1px solid #000000;}
 td    {vertical-align: top; background: #E0E0E0; padding: 0 .5em;}
-.left {width: 100px;}
+.left {width: 90px;}
 	</style>
 </head>
 <body>
 	<h1>Matthew James Booth</h1>
-	<p class="noprint"><a href="http://people.apache.org/%7Embooth/resume.pdf">Download</a> a PDF version of this document.</p>
-	<p class="noscreen">View the on-line version of this document at: http://people.apache.org/~mbooth/resume.xhtml</p>
+	<p class="noprint"><a href="https://people.apache.org/~mbooth/resume.pdf">Download</a> a PDF version of this document.</p>
+	<p class="noscreen">View the on-line version of this document at: https://people.apache.org/~mbooth/resume.html</p>
 	<table><tr>
 		<td class="left">
 			<h2>Personal</h2>
 		</td><td>
-			<p>1, Daresbury Road<br />Sheffield<br />United Kingdom<br />S2 2LN</p>
+			<p>33, Mason Crescent<br />Sheffield<br />United Kingdom<br />S13 8LH</p>
 		</td><td>
 			<p>Nationality: British<br /><br />Phone: +44 (0) 7817 747664<br />Email: <a href="mailto:mbooth@apache.org">mbooth@apache.org</a></p>
 		</td>
@@ -62,13 +56,23 @@ td    {vertical-align: top; background: #E0E0E0; padding: 0 .5em;}
 			<h2>Skills Summary</h2>
 		</td><td>
 			<ul>
-				<li>Eight years professional Java experience plus excellent knowledge of Shell Scripting and a working knowledge of C, C++, Python, Perl.</li>
-				<li>Excellent knowledge of the Eclipse IDE, having used it to develop multi-language and multi-platform applications.</li>
-				<li>Excellent knowledge of the Linux operating system (particularly Fedora and Red Hat), RPM packaging and open source development practices.</li>
-				<li>Excellent team development skills using centralised source control systems (Subversion and CVS) and defect tracking tools (Bugzilla, Jira and Trac) with good knowledge of distributed source control (Git).</li>
-				<li>Good knowledge of the Apache Maven and Ant build tools plus working knowledge of the GNU build tools and continuous integration systems like Jenkins and Bitten.</li>
+				<li>Almost 15 years experience as a professional software engineer.</li>
+				<li>Excellent knowledge of Java and Shell Script and a working knowledge of C and Python.</li>
+				<li>Excellent knowledge of Java eco-system build tools Maven, Tycho and Ant, plus working knowledge of Gradle and the GNU build tools.</li>
+				<li>Excellent team development skills using source control and code review systems (Git, Gerrit and Subversion), defect tracking tools (Bugzilla, Jira and Trac) and CI systems like Jenkins.</li>
+			</ul>
+			<h3>Open Source</h3>
+			<ul>
+				<li>Excellent knowledge of Open Source development methodologies, being a committer at the Eclipse Foundation, the Apache Software Foundation, and the Fedora Linux project.</li> 
+				<li>Excellent knowledge of Linux and distro integration using RPM and SCL packaging techniques.</li>
+				<li>Excellent knowledge of the Eclipse IDE, being a contributor to the Eclipse platform and various high-profile Eclipse plug-ins and having used it to develop multi-language and multi-platform applications.</li>
+				<li>Good knowledge of the cross-distro software packaging system Flatpak, being the maintainer of the OpenJDK runtime extensions and Eclipse IDEs in Flathub.</li>
+			</ul>
+			<h3>Other Skills</h3>
+			<ul>
+				<li>Good presentation skills, having spoken at international conferences FOSDEM and EclipseCon as well as at various local programming user groups.</li>
 				<li>Good technical writing skills.</li>
-				<li>Ministry of Defence 'SC Cleared' security clearance (lapsed).</li>
+				<li>UK security clearance 'SC' cleared (lapsed).</li>
 			</ul>
 		</td>
 	</tr></table>
@@ -76,63 +80,83 @@ td    {vertical-align: top; background: #E0E0E0; padding: 0 .5em;}
 		<td class="left">
 			<h2>Professional Experience</h2>
 		</td><td>
-			<h3>03/2014 - Present — Software Engineer, Eclipse Team, <a href="http://www.redhat.com/">Red Hat UK Ltd</a></h3>
-			<p>As an engineer on the Eclipse Team at Red Hat, my main responsibilities include maintaining the <a href="http://www.eclipse.org/">Eclipse Platform</a> and our Eclipse-based products in Red Hat Enterprise Linux and upstream in our community distribution, Fedora Linux. My duties also include contributing improvements to the Eclipse Linux Tools project, the Eclipse Platform project and any other projects that may be necessary in order to keep Eclipse building and working as well on Linux as it does on the other major platforms.</p>
-			<h3>03/2011 - 03/2014 — Senior Software Engineer, <a href="http://www.wandisco.com/">WANdisco Inc</a></h3>
-			<p>Being one of the main sponsors of the <a href="http://subversion.apache.org/">Apache Subversion</a> project my main responsibilities at WANdisco have been to design and develop aspects of their enterprise and business ecosystem of Subversion-based products. In particular I have been involved in the major redevelopment of the company's flag-ship product <a href="http://www.wandisco.com/subversion/multisiteplus">SVN MultiSite Plus</a>, which gives customers with large sets of distributed engineers the ability to have geographically local replicas of Subversion source code repositories with multi-master (as opposed to master-slave or fail-over) replication of commits. Working on these products has given me a much deeper understanding of distributed computing than I had previously.</p>
-			<p>I was also heavily involved in the development of <a href="http://www.wandisco.com/ubersvn/download">a separate product</a>
- designed for the management of single node installations of Subversion.
- With the help of others I am currently in the process of getting this 
-product released as an open source project.</p>
-			<h3>12/2006 - 03/2011 — Software Engineer, <a href="http://www.servelec-technologies.com/">CSE-Servelec Ltd</a></h3>
+			<h3>03/2014 - Present — Senior Software Engineer, IDE Services, <a href="https://www.redhat.com/">Red Hat UK Ltd</a></h3>
+			<p>As an engineer on the IDE Services at Red Hat, my main responsibilities include maintaining the <a href="https://www.eclipse.org/">Eclipse Platform</a> and Eclipse-based products in RHEL and upstream in the community distribution, Fedora.</p>
+			<p>I was responsible for the development and productisation of the <a href="https://access.redhat.com/documentation/en-us/red_hat_developer_tools/1/">Red Hat Developer Tools</a> product using software collections (SCL) which is a technique that allows the packaging of software as RPMs such that it allows the parallel installation of multiple versions of a product into a system and also allows the development and release of such products much more quickly than the base operating system. This is especially useful for allowing developers to use the most modern tools to develop for the slow-moving but stable RHEL platform.</p>
+			<p>Since Fedora is a more cutting-edge Linux, I was solving the opposite problem there, where dependencies are updated much more frequently than the upstream Eclipse project can keep up with. This means I was quite often the first person in the world to be building Eclipse against new versions of, for example, GTK, so I would develop and carry patches for Eclipse and its eco-system of plug-ins until they could be upstreamed for the next release. This work allowed us to keep Linux as a first-class supported environment for developers using Eclipse.</p>
+			<p>Lately my focus has been enabling users to use Eclipse as a <a href="https://flatpak.org/">sandboxed Flatpak application</a> and solving problems preventing users having a smooth experience in that environment, such as the proper detection and use of JDKs installed on the sandbox host, and the in place upgrade of Eclipse plug-ins.</p>
+			<h3>03/2011 - 03/2014 — Senior Software Engineer, <a href="https://www.wandisco.com/">WANdisco Inc</a></h3>
+			<p>Being one of the main sponsors of the <a href="https://subversion.apache.org/">Apache Subversion</a> project my main responsibilities at WANdisco have been to design and develop aspects of their enterprise and business ecosystem of Subversion-based products. In particular I have been involved in the major redevelopment of the company's flag-ship product <a href="https://docs.wandisco.com/svn/ms-plus/1.10/">SVN MultiSite Plus</a>, which gives customers with large sets of distributed engineers the ability to have geographically local replicas of Subversion source code repositories with multi-master (as opposed to master-slave or fail-over) replication of commits. Working on these products has given me a much deeper understanding of distributed computing than I had previously.</p>
+			<p>I was also heavily involved in the development of <a href="https://docs.wandisco.com/svn/ubersvn/v1.0/index.html">a separate product</a> designed for the management of single node installations of Subversion.</p>
+			<h3>12/2006 - 03/2011 — Software Engineer, <a href="https://www.itigroup.co.uk/">CSE-Servelec Ltd</a></h3>
 			<p>Quickly gained promotion from Junior Software Engineer to Software Engineer.</p>
-			<p>The primary project I was involved in was the design and implementation of a centralised meteorological monitoring system for the UK Met Office. This involved working with a partner outstation supplier to provide automatic, fault-tolerant telemetry data collection services over IP, PSTN and GSM networks for climate science and flight-safety purposes.</p>
+			<p>The primary project I was involved in was the design and implementation of a centralised meteorological monitoring system for the <a href="https://www.metoffice.gov.uk/">UK Met Office</a>. This involved working with a partner outstation supplier to provide automatic, fault-tolerant telemetry data collection services over IP, PSTN and GSM networks for climate science and flight-safety purposes.</p>
 			<p>With the help of UK Met Office scientists, we developed algorithms that augment the raw telemetry collected using past and present data collected from various sensors to improve the accuracy of the detection of meteorological events. I was also responsible for the implementation of the World Meteorological Organisation's standards on data exchange, which allows the UK Met Office to share data from this system with meteorological agencies around the world.</p>
-			<p>In addition to project work for external customers, I've also worked on instituting new internal build and issue tracking systems. This included migrating source code from disparate version control systems to a single Apache Subversion repository and replacing an ageing, in-house issue tracking system with an open source <a href="http://trac.edgewall.org/">issue tracker</a> and <a href="http://bitten.edgewall.org/">build system</a> in order to reduce maintenance overhead, simplify processes and provide continuous integration testing. A part of this work has been to write plug-ins and patches in Python to customise these systems to match (and in some cases, improve) our internal business processes.</p>
-			<h3>08/2004 - 11/2006 — Various Posts, <a href="http://www.adecco.co.uk/">Adecco</a></h3>
-			<p>Prior to finding a job in the software industry, I took work where I could through a temping agency. This included a variety of data entry, office clerk and warehouse positions.</p>
+			<p>In addition to project work for external customers, I've also worked on instituting new internal build and issue tracking systems. This included migrating source code from disparate version control systems to a single Apache Subversion repository and replacing an ageing, in-house issue tracking system with an open source <a href="https://trac.edgewall.org/">issue tracker</a> and <a href="https://bitten.edgewall.org/">build system</a> in order to reduce maintenance overhead, simplify processes and provide continuous integration testing. A part of this work has been to write plug-ins and patches in Python to customise these systems to match (and in some cases, improve) our internal business processes.</p>
 		</td>
 	</tr></table>
-	<br class="break" />
 	<table><tr>
 		<td class="left">
 			<h2>Other Experience</h2>
 		</td><td>
-			<h3>12/2007 - Present — Package Maintainer, <a href="https://fedoraproject.org/en/get-fedora">The Fedora Project</a></h3>
-			<p>As an enthusiastic participant in the open source community, I serve as the primary maintainer for <a href="https://admin.fedoraproject.org/pkgdb/users/packages/mbooth">many Java and Eclipse related packages</a>
- for Fedora Linux and have earned "proven packager" status for my work, 
-which includes the maintenance of several Eclipse plug-ins and several 
-key low-level Java libraries that are used by hundreds of other 
-libraries and applications. The continuing goal is to make Fedora the 
-best Linux distribution for Java and Eclipse based software development,
- both as an IDE and as a platform.</p>
+			<h3>2017 - Present — Contributor, <a href="https://flathub.org/home">Flathub</a></h3>
+			<p>At Flathub I maintain the <a href="https://github.com/flathub/?q=openjdk">
+			OpenJDK extensions</a> for the Freedesktop runtime, which enabled the contribution
+			to Flathub of all manner of Java-based software including the <a href="https://flathub.org/apps/search/org.eclipse.Java">
+			Eclipse IDE</a> of which I am also the co-maintainer. According to Flathub stats,
+			these apps are used by thousands of people every month.</p>
+			<h3>2014 - Present — Committer, <a href="https://www.eclipse.org/">Eclipse Foundation</a></h3>
+			<p>Initially I became involved with the <a href="https://projects.eclipse.org/projects/tools.linuxtools">
+			Eclipse Linuxtools</a> project as part of my efforts doing downstream rebuilds
+			of Eclipse IDE at the Fedora Project, where my goal was to make Eclipse the
+			best available IDE for developing software on Linux.</p>
+			<p>My latest contributions in this vein were the development of Maven plug-ins
+			to allow generation of Flatpak applications from Eclipse products and the
+			development of a tool to give Eclipse the ability to run and debug processes on the host system from
+			inside a Flatpak sandbox, essential to allow people to develop and debug
+			Java programs using additional JDKs that are not available inside the sandbox.
+			<p>Some time ago I was also nominated a committer to the <a href="https://projects.eclipse.org/projects/eclipse.platform">
+			Eclipse Platform</a> itself and eventually was trusted to become the <a href="https://www.eclipse.org/lists/platform-dev/msg02336.html">
+			first non-IBM employee to lead a release</a> of the Eclipse Platform.</p>
+			<p>I was also involved in the development of a popular Shell Script plug-in
+			for Eclipse called that was eventually <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=473983">
+			contibuted</a> to the <a href="https://projects.eclipse.org/projects/technology.dltk">
+			Eclipse Dynamic Languages Toolkit</a> project.
+			<h3>2007 - Present — Package Maintainer, <a href="https://getfedora.org/">The Fedora Project</a></h3>
+			<p>I serve as the primary maintainer for <a href="https://src.fedoraproject.org/user/mbooth/projects">
+			many Java and Eclipse related packages</a> for Fedora Linux and have earned
+			"proven-packager" status for my work, which includes the maintenance of several
+			Eclipse plug-ins and several key low-level Java libraries that are used by
+			hundreds of other libraries and applications.</p>
 			<p>Package maintenance duties include responding to user bug reports 
-and either reporting them to the upstream project or submitting patches 
-upstream as appropriate, keeping packages up to date as new versions are
- released and working with other maintainers from around the world to 
-ensure all dependencies and dependent packages continue to interact with
- each other correctly.</p>
-			<h3>Present — Committer and Contributor, Various Open Source Projects</h3>
-			<p>Working with someone from the open source Java and Eclipse 
-communities in the Fedora Project, I have been involved in the 
-development of a popular <a href="http://sourceforge.net/apps/trac/shelled/">Shell Script</a> editor plug-in for Eclipse.</p>
-			<p>I am a committer and project management committee (PMC) member of the <a href="http://bloodhound.apache.org/">Apache Bloodhound</a> project. I am a committer on the Linux Tools project of the Eclipse Foundation.</p>
-			<p>I have contributed patches to various other projects including other Eclipse projects, OpenLDAP, Apache Maven, Spring Security and others.</p>
+			and either reporting them to the upstream project or submitting patches 
+			upstream as appropriate, keeping packages up to date as new versions are
+			released and working with other maintainers from around the world to 
+			ensure all dependencies and dependent packages continue to interact with
+			each other correctly.</p>
+			<p>I also spent a number of years serving on the Fedora Packaging Committee where
+			RPM packaging guidelines are developed for the wider RPM community.</p>
+			<h3>2012 - 2016 — PMC Member, <a href="https://bloodhound.apache.org/">Apache Bloodhound</a></h3>
+			<p>I was involved in a fork of the <a href="https://trac.edgewall.org/">Trac</a>
+			bug-tracking system to add features that upstream was not interested in
+			adding to the core of the project. When we brought Bloodhound to the
+			Apache Foundation I was a founding committer and project management committee
+			(PMC) member of the project.</p> 
+			<p>Despite the project now being moribund, I retain my committer status at
+			the Apache Foundation.</p>
+			<h3>Contributor, Various Open Source Projects</h3>
+			<p>I have contributed patches to various other projects including OpenLDAP,
+			Apache Maven, Spring Security, Jetty, Flatpak and numerous other Eclipse Foundation projects.</p>
 		</td>
 	</tr></table>
 	<table><tr>
 		<td class="left">
 			<h2>Education</h2>
 		</td><td>
-			<h3>2001 - 2004 — <a href="http://www.lincoln.ac.uk/">University of Lincoln</a></h3>
+			<h3>2001 - 2004 — <a href="https://www.lincoln.ac.uk/">University of Lincoln</a></h3>
 			<ul>
 				<li>BSc (Honours) Games Computing (Software Development)</li>
 				<li>Grade: 2.1</li>
-			</ul>
-			<h3>1999 - 2001 — <a href="http://www.chesterfield.ac.uk/">Chesterfield College</a></h3>
-			<ul>
-				<li>Advanced GNVQ Information Technology</li>
-				<li>Grade: Merit</li>
 			</ul>
 		</td>
 	</tr></table>
