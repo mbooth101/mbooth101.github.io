@@ -25,13 +25,13 @@ Which brings me back to Eclipse... Since GTK was updated to 3.18 on Fedora there
 
 The following screenshot shows the difference it has made to the background colours in the workspace chooser dialog. Eclipse downloaded from eclipse.org is on the left, Eclipse from the Fedora package is on the right:
 
-![Workspace Chooser]({filename}/images/workspace_chooser_colors.png)
+![Workspace Chooser]({static}/images/workspace_chooser_colors.png)
 
 You should see the same difference in other dialogs too, such as wizard dialogs and the EGit commit dialog.
 
 The next screenshot shows the difference it has made to the form editor, where text labels used to be positioned incorrectly or oddly truncated. Again, Eclipse downloaded from eclipse.org is on the left, Eclipse from the Fedora package is on the right:
 
-![Form Editor]({filename}/images/form_editor_text.png)
+![Form Editor]({static}/images/form_editor_text.png)
 
 Many thanks to [Eric Williams](https://twitter.com/yyzericwill) for getting these highly visible SWT/GTK bugs fixed and committed upstream at eclipse.org and thus allowing me to back-port them to Fedora. I'm sure our users will appreciate it!
 

@@ -22,7 +22,7 @@ Then you can install the whole collection by doing:
 
 This will install everything you need to run Eclipse Luna (including a bunch of useful plug-ins for Java and C/C++ development) on your Fedora 20 machine. After installation is complete, you may notice Eclipse Luna's shiny new icon appear next to the old one in GNOME.
 
-![Luna Launcher]({filename}/images/eclipse-luna-f20-launcher.png)
+![Luna Launcher]({static}/images/eclipse-luna-f20-launcher.png)
 
 Alternatively, if you ever need to launch Eclipse from a terminal, you can do so with the following command:
 

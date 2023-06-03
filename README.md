@@ -5,15 +5,14 @@ This repository contains the raw content and makefiles for publishing the blog u
 ## Initial Setup on Fedora
 
     $ sudo dnf install python3-pelican
-    $ git clone ssh://mbooth@git.darkpeak.org/blog-o-matic.git
-    $ cd blog-o-matic
+    $ git clone git@github.com:mbooth101/mbooth101.github.io.git
+    $ cd mbooth101.github.io
 
 ## Publishing
 
-Create articles in the __content__ directory, pages in the __content/pages__ directory and add any images to the __content/images__ directory. Articles and pages should be written in markdown. The new content can be tested using a local server on port 8000:
+Create articles in the __content__ directory, pages in the __content/pages__ directory and add any images to the __content/images__ directory. Articles and pages should be written in markdown. The new content can be tested and developed using a local server with live-reloading, on port 8000:
 
-    $ make html
-    $ make serve
+    $ make devserver
 
 Commit everything when done:
 
@@ -21,7 +20,7 @@ Commit everything when done:
     $ git commit -am "Commit the new content"
     $ git push
 
-Find the new content on the live blog: [http://blog.matbooth.co.uk/](http://blog.matbooth.co.uk/)
+Find the new content on the live site: [https://matbooth.co.uk/](https://matbooth.co.uk/)
 
 ## License
 
