@@ -3,7 +3,7 @@ Date: 2013-12-17 17:00
 Modified: 2013-12-17 17:00
 Category: Misc
 Tags: fedora
-Slug: fedora-20-released
+Slug: 01-fedora-20-released
 Author: Mat Booth
 Summary: The Fedora Project is proud to announce the release of Fedora 20 today!
 

@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
         <title>Eclipse Module on F30 Addendum</title>
-        <link rel="stylesheet" href="http://blog.matbooth.co.uk/theme/css/main.css" />
-        <link href="http://blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
+        <link rel="stylesheet" href="https://matbooth.co.uk/theme/css/main.css" />
+        <link href="https://matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
+        <meta name="description" content="Additional information about installing the Eclipse IDE module on F30." />
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://blog.matbooth.co.uk/">Mat's Blog-O-Matic<strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <h1><a href="https://matbooth.co.uk/">Mat's Blog-O-Matic <strong>A Linux, coding and DIY blog.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/tag/fedora.html">Fedora</a></li>
                     <li><a href="/tag/eclipse.html">Eclipse</a></li>
                     <li><a href="/tag/diy.html">DIY</a></li>
-                    <li><a href="http://blog.matbooth.co.uk/pages/about-mat-booth.html">About Mat Booth</a></li>
+                    <li><a href="https://matbooth.co.uk/pages/about-mat-booth.html">About Mat Booth</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="http://blog.matbooth.co.uk/10-eclipse-module-f30-addendum.html" rel="bookmark"
+        <a href="https://matbooth.co.uk/10-eclipse-module-f30-addendum.html" rel="bookmark"
            title="Permalink to Eclipse Module on F30 Addendum">Eclipse Module on F30 Addendum</a></h1>
     </header>
 
@@ -36,15 +39,15 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="http://blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
+                By                         <a class="url fn" href="https://matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
         </address>
-<p>In <a href="http://blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
-<p>tags: <a href="http://blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="http://blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
-</footer><!-- /.post-info -->      <p><img alt="Eclipse IDE Logo" src="http://blog.matbooth.co.uk/images/eclipse-logo.jpg"></p>
-<p>As <a href="/09-eclipse-module-f30.html">I wrote previously</a> Eclipse is now available as a module for <a href="https://docs.fedoraproject.org/en-US/modularity/">Fedora Modularity</a>.</p>
+<p>In <a href="https://matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="https://matbooth.co.uk/tag/fedora.html">fedora</a> <a href="https://matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
+</footer><!-- /.post-info -->      <p><img alt="Eclipse IDE Logo" src="https://matbooth.co.uk/images/eclipse-logo.jpg"></p>
+<p>As <a href="https://matbooth.co.uk/09-eclipse-module-f30.html">I wrote previously</a> Eclipse is now available as a module for <a href="https://docs.fedoraproject.org/en-US/modularity/">Fedora Modularity</a>.</p>
 <p>After I wrote that blog post I received some reports of installation difficulty. Some people are experiencing this kind of error:</p>
 <div class="highlight"><pre><span></span><code>$ sudo dnf module install eclipse
-Error: Problems in request:
+Error: Problems <span class="k">in</span> request:
 broken groups or modules: eclipse
 Modular dependency problems:
 
@@ -53,7 +56,6 @@ Modular dependency problems:
   - module ant:1.10:2820190409091957:819b5873-0.x86_64 is disabled
   - module ant:1.10:2820190508055149:819b5873-0.x86_64 is disabled
 </code></pre></div>
-
 
 <p>It appears that if you have previously explicitly disabled a module on which Eclipse depends, then this user action takes precedence over any implicit enablement of module dependencies. I assume this is an intentional behaviour of DNF (hopefully any DNF people reading can correct this assumption if it is not true) but IMO it should probably ask the user if they want to enable the previously disabled module since that is clearly the only way forward.</p>
 <p>In order to fix this situation, you can use the <code>dnf</code> command to reset the module state so that it is no longer explicitly enabled or disabled. For example, to reset the state of all modules that Eclipse depends on:</p>
@@ -72,8 +74,7 @@ Is this ok <span class="o">[</span>y/N<span class="o">]</span>: y
 Complete!
 </code></pre></div>
 
-
-<p>You can now <a href="{filename}/09-eclipse-module-f30.html">install the Eclipse module as documented previously</a>.</p>
+<p>You can now <a href="https://matbooth.co.uk/09-eclipse-module-f30.html">install the Eclipse module as documented previously</a>.</p>
     </div><!-- /.entry-content -->
 
   </article>
@@ -82,21 +83,21 @@ Complete!
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="http://blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="https://matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/mbooth101">github</a></li>
                             <li><a href="https://twitter.com/FOSS_mbooth">twitter</a></li>
-                            <li><a href="mailto:mbooth@fedoraproject.org">email</a></li>
+                            <li><a href="mailto:blog@matbooth.co.uk">email</a></li>
                         </ul>
                 </div><!-- /.social -->
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
                 </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
         </footer><!-- /#contentinfo -->
 
 </body>

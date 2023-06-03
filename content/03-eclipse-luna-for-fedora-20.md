@@ -3,7 +3,7 @@ Date: 2014-08-22 13:00
 Modified: 2014-08-22 15:00
 Category: Misc
 Tags: fedora, eclipse
-Slug: eclipse-luna-for-fedora-20
+Slug: 03-eclipse-luna-for-fedora-20
 Author: Mat Booth
 Summary: Eclipse Luna is now available for Fedora 20 as a software collection.
 

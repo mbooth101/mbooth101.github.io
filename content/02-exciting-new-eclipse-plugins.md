@@ -3,7 +3,7 @@ Date: 2014-08-21 14:00
 Modified: 2014-08-21 14:00
 Category: Misc
 Tags: fedora, eclipse
-Slug: exciting-new-eclipse-plugins
+Slug: 02-exciting-new-eclipse-plugins
 Author: Mat Booth
 Summary: TestNG and PHP Development Tools (PDT) plug-ins are now available in Fedora.
 

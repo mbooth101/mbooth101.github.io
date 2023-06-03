@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
         <title>Eclipse is Now a Module on Fedora 30</title>
-        <link rel="stylesheet" href="http://blog.matbooth.co.uk/theme/css/main.css" />
-        <link href="http://blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
+        <link rel="stylesheet" href="https://matbooth.co.uk/theme/css/main.css" />
+        <link href="https://matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mat's Blog-O-Matic Atom Feed" />
+        <meta name="description" content="How to install the Eclipse IDE module on Fedora 30!" />
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://blog.matbooth.co.uk/">Mat's Blog-O-Matic<strong>A Linux, coding and DIY blog.</strong></a></h1>
+                <h1><a href="https://matbooth.co.uk/">Mat's Blog-O-Matic <strong>A Linux, coding and DIY blog.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/tag/fedora.html">Fedora</a></li>
                     <li><a href="/tag/eclipse.html">Eclipse</a></li>
                     <li><a href="/tag/diy.html">DIY</a></li>
-                    <li><a href="http://blog.matbooth.co.uk/pages/about-mat-booth.html">About Mat Booth</a></li>
+                    <li><a href="https://matbooth.co.uk/pages/about-mat-booth.html">About Mat Booth</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="http://blog.matbooth.co.uk/09-eclipse-module-f30.html" rel="bookmark"
+        <a href="https://matbooth.co.uk/09-eclipse-module-f30.html" rel="bookmark"
            title="Permalink to Eclipse is Now a Module on Fedora 30">Eclipse is Now a Module on Fedora 30</a></h1>
     </header>
 
@@ -36,11 +39,11 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="http://blog.matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
+                By                         <a class="url fn" href="https://matbooth.co.uk/author/mat-booth.html">Mat Booth</a>
         </address>
-<p>In <a href="http://blog.matbooth.co.uk/category/misc.html">Misc</a>.</p>
-<p>tags: <a href="http://blog.matbooth.co.uk/tag/fedora.html">fedora</a> <a href="http://blog.matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
-</footer><!-- /.post-info -->      <p><img alt="Eclipse IDE Logo" src="http://blog.matbooth.co.uk/images/eclipse-logo.jpg"></p>
+<p>In <a href="https://matbooth.co.uk/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="https://matbooth.co.uk/tag/fedora.html">fedora</a> <a href="https://matbooth.co.uk/tag/eclipse.html">eclipse</a> </p>
+</footer><!-- /.post-info -->      <p><img alt="Eclipse IDE Logo" src="https://matbooth.co.uk/images/eclipse-logo.jpg"></p>
 <p>From Fedora 30 onwards, Eclipse will be available as a module for <a href="https://docs.fedoraproject.org/en-US/modularity/">Fedora Modularity</a>.</p>
 <p>When you query <code>dnf</code> for the available modules you will see this:</p>
 <div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">eclipse</span><span class="w"></span>
@@ -52,7 +55,6 @@
 <span class="nl">Hint</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">d</span><span class="o">]</span><span class="n">efault</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">e</span><span class="o">]</span><span class="n">nabled</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">x</span><span class="o">]</span><span class="n">disabled</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="n">nstalled</span><span class="w"></span>
 </code></pre></div>
 
-
 <p>This shows that <strong>Eclipse 2019-06</strong> is available to install with three different profiles from which to choose. Each profile will install the Eclipse IDE and a curated set of plug-ins for accomplishing specific tasks.</p>
 <ul>
 <li><strong>java</strong> -- This is the default profile and will install everything you need to start developing Java applications.</li>
@@ -63,13 +65,11 @@
 <div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">eclipse</span><span class="w"></span>
 </code></pre></div>
 
-
 <p>Then you can launch Eclipse in the usual way from your desktop environment. If you later decide you need the extra plug-ins from the other profiles, you can simply do this to get them:</p>
 <div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">eclipse</span><span class="o">/</span><span class="n">c</span><span class="w"></span>
 <span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="p">...</span><span class="ow">or</span><span class="p">...</span><span class="w"></span>
 <span class="o">[</span><span class="n">mbooth@fedora30 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">eclipse</span><span class="o">/</span><span class="n">everything</span><span class="w"></span>
 </code></pre></div>
-
 
 <p>You can read more about managing which modules you have installed in the <a href="https://docs.fedoraproject.org/en-US/modularity/using-modules/">Fedora Modularity documentation</a>.</p>
 <p><strong>Public Service Announcement:</strong> I encourage all Fedora Eclipse users to start using the Modularity version because in order to reduce my package maintenance overhead, the packages from the base distro will eventually be retired.</p>
@@ -82,21 +82,21 @@
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="http://blog.matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="https://matbooth.co.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/mbooth101">github</a></li>
                             <li><a href="https://twitter.com/FOSS_mbooth">twitter</a></li>
-                            <li><a href="mailto:mbooth@fedoraproject.org">email</a></li>
+                            <li><a href="mailto:blog@matbooth.co.uk">email</a></li>
                         </ul>
                 </div><!-- /.social -->
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
                 </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
         </footer><!-- /#contentinfo -->
 
 </body>
