@@ -86,7 +86,7 @@ GEM
       activesupport (>= 2)
       nokogiri (>= 1.4)
     http_parser.rb (0.8.0)
-    i18n (1.14.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jekyll (3.9.3)
       addressable (~> 2.4)
@@ -101,6 +101,8 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-archives (2.2.1)
+      jekyll (>= 3.6, < 5.0)
     jekyll-avatar (0.7.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-coffeescript (1.1.1)
@@ -254,7 +256,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 228)
-  jekyll-feed (~> 0.12)
+  jekyll-archives
+  jekyll-feed
+  jekyll-include-cache
   webrick (~> 1.8)
 
 BUNDLED WITH
