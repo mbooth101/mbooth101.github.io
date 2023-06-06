@@ -1,22 +1,22 @@
-# Mat's Blog-O-Matic
+# Website Source
 
-This repository contains the raw content and makefiles for publishing the blog using the [Pelican](http://blog.getpelican.com/) static site generator tool.
+This repository contains the source files for publishing the matbooth.co.uk site using the Jekyll static site generator tool and GitHub Pages.
 
 ## Initial Setup on Fedora
 
-    $ sudo dnf install python3-pelican
+    $ sudo dnf install ruby ruby-devel rubygem-bundler
     $ git clone git@github.com:mbooth101/mbooth101.github.io.git
     $ cd mbooth101.github.io
+    $ bundle update
 
 ## Publishing
 
-Create articles in the __content__ directory, pages in the __content/pages__ directory and add any images to the __content/images__ directory. Articles and pages should be written in markdown. The new content can be tested and developed using a local server with live-reloading, on port 8000:
+Create pages in the root directory and blog articles in the __\_posts/__ directory. Add images and media to the __assets/__ directory. Pages and blog articles pages should be written in markdown. The new content can be tested and developed using a local server on port 4000:
 
-    $ make devserver
+    $ bundle exec jekyll serve
 
 Commit everything when done:
 
-    $ make publish
     $ git commit -am "Commit the new content"
     $ git push
 
