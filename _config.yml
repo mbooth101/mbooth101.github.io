@@ -50,7 +50,7 @@ jekyll-archives:
 author:
   name: *name
   avatar: "/assets/images/hackergotchi-mbooth.png"
-  bio: "Professional ones and zeroes plumber."
+  bio: "Professional ones and zeroes plumber and open source advocate. Amateur DIY and tool enthusiast."
   location: "Sheffield, UK"
   email: "mat@matbooth.co.uk"
   links:
