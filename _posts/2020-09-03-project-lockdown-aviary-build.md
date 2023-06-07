@@ -127,7 +127,7 @@ This enclosure will house the latch tongue, handle and return spring. I had to b
 
 The holes you see drilled in the enclosure above holds the latch tongue captive. The spring surrounds the latch tongue and acts on the latch handle to force the tongue into a corresponding hole in the gate frame, as demonstrated in this video:
 
-<video controls width="636">
+<video controls width="100%">
     <source src="/assets/images/diy/15-latch-demo.webm" type="video/webm">
 </video>
 
