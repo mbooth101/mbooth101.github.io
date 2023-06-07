@@ -1,6 +1,4 @@
 ---
-layout: single
-author_profile: true
 title: Benefits of Linux Distro Packaging
 date: 2015-12-09 11:00
 tags: linux eclipse

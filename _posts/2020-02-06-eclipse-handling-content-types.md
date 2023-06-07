@@ -1,6 +1,4 @@
 ---
-layout: single
-author_profile: true
 title: Eclipse and Handling Content Types on Linux
 date: 2020-02-06 15:00
 tags: linux eclipse
@@ -22,11 +20,11 @@ Just declare that they support all the file types, and fail gracefully if the su
 
 In Eclipse's case, I don't think we can know up front all the possible content types for which people can author plug-ins, however each Marketplace entry advertises (or should advertise) what content types are supported by its plug-ins. By collecting this information for Marketplace entries that support the release of Eclipse we are building (e.g., 2019-12) we could generate a monster desktop file that contains all the types the Marketplace knows about at that time.
 
-### Pros:
+### Pros
 
 This allows users to discover that Eclipse can support a type even before the user has even opened Eclipse, or installed any plug-ins, simply by attempting to open a file in their file manager.
 
-### Cons:
+### Cons
 
 New Marketplace entries created after Eclipse is built would be omitted from this list, but that might not a be big problem in real life. A rebuild would be required to update the content type list.
 
@@ -40,7 +38,7 @@ When installed, extensions deliver additional desktop entry files that contain t
 
 In Eclipse's case we know what content types a plug-in supports because each one contributes to the extension registry about which file extensions it knows, so Eclipse could be taught to generate new desktop entries file after a p2 install/uninstall operation.
 
-### Pros:
+### Pros
 
 No need to know about all the content types up-front, so saves on packaging work and not all Marketplace entries are correctly annotated with their supported content types anyway.
 
@@ -48,7 +46,7 @@ Wouldn't clutter up the user's file manager with options they might not ever car
 
 Plug-in installation is user-specific for read-only installations like RPM and Flatpak, so this has the nice side-effect on multi-user systems of showing the option to open a file with Eclipse only to users who have the relevant plug-ins installed.
 
-### Cons:
+### Cons
 
 Eclipse needs to know how to generate new desktop files when a plug-in is installed that adds support for a new content type.
 

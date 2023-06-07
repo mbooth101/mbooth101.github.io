@@ -1,6 +1,4 @@
 ---
-layout: single
-author_profile: true
 title: Eclipse Now Available From Flathub
 date: 2020-01-20 16:00
 tags: linux eclipse

@@ -1,6 +1,4 @@
 ---
-layout: single
-author_profile: true
 title: Simple Hammer Repair
 date: 2019-09-03 12:00
 tags: diy

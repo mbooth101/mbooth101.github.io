@@ -1,6 +1,4 @@
 ---
-layout: single
-author_profile: true
 title: Don't Know My Own Strength
 date: 2019-01-29 15:00
 last_modified_at: 2019-09-03 12:00

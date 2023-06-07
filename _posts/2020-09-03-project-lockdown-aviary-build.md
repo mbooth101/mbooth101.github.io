@@ -1,6 +1,4 @@
 ---
-layout: single
-author_profile: true
 title: Project Lockdown Aviary Build
 date: 2020-09-03 12:00
 tags: diy
@@ -125,11 +123,13 @@ This enclosure will house the latch tongue, handle and return spring. I had to b
 
 <a href="/assets/images/diy/15-latch-materials.jpg">![There's a catch to it.](/assets/images/diy/15-latch-materials_small.jpg)</a>
 
-The holes you see drilled in the enclosure above holds the latch tongue captive. The spring surrounds the latch tongue and acts on the latch handle to force the tongue into a corresponding hole in the gate frame, as demonstrated in this video:
+The holes you see drilled in the enclosure above holds the latch tongue captive. The spring surrounds the latch tongue and acts on the latch handle to force the tongue into a corresponding hole in the gate frame, as demonstrated below:
 
 <video controls width="100%">
     <source src="/assets/images/diy/15-latch-demo.webm" type="video/webm">
 </video>
+*Demo of the gate latch mechanism.*
+{:style="font-size:0.75em"}
 
 I tried to fix the handle to the latch tongue with a set screw, but of course this stainless steel was too much for my cheap taps and I inevitably snapped the tap mid way cutting the threads:
 
@@ -141,7 +141,7 @@ I also needed a "door stop" to prevent the gate from being opened backwards and 
 
 <a href="/assets/images/diy/15-gate-stop.jpg">![Push, not pull.](/assets/images/diy/15-gate-stop_small.jpg)</a>
 
-## Epilogue
+# Epilogue
 
 I was right, learning to weld **was** a great deal more fun than just buying some custom made aviary panels. The whole project took my two full weeks of PTO working every day, plus something like the next six following weekends, so it was expensive and laborious but a great learning experience.
 

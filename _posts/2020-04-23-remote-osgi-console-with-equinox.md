@@ -1,6 +1,4 @@
 ---
-layout: single
-author_profile: true
 title: Using the remote OSGi console with Equinox
 date: 2020-04-23 15:00
 tags: eclipse osgi

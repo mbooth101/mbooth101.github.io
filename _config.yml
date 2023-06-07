@@ -46,6 +46,17 @@ jekyll-archives:
     year: year-archive
     tag: tag-archive
 
+# Blog Post Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      toc: true
+      read_time: true
+
 # Site Author
 author:
   name: *name

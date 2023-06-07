@@ -1,6 +1,4 @@
 ---
-layout: single
-author_profile: true
 title: The State of Java in Flathub
 date: 2019-07-22 16:00
 tags: linux java
