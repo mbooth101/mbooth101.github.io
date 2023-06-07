@@ -1,6 +1,6 @@
 # Website Source
 
-This repository contains the source files for publishing the matbooth.co.uk site using the Jekyll static site generator tool and GitHub Pages.
+This repository contains the source files for publishing the [https://matbooth.co.uk](matbooth.co.uk) site using the [https://jekyllrb.com/](Jekyll) static site generator tool and GitHub Pages.
 
 ## Initial Setup on Fedora
 
@@ -14,6 +14,10 @@ This repository contains the source files for publishing the matbooth.co.uk site
 Create pages in the root directory and blog articles in the __\_posts/__ directory. Add images and media to the __assets/__ directory. Pages and blog articles pages should be written in markdown. The new content can be tested and developed using a local server on port 4000:
 
     $ bundle exec jekyll serve
+
+GitHub Pages does not support the Jekyll Archives plugin, so we need to save the generated tag archive index pages:
+
+    $ cp -pr _site/blog/*/ blog
 
 Commit everything when done:
 
