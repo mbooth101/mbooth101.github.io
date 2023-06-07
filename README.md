@@ -11,9 +11,12 @@ This repository contains the source files for publishing the [https://matbooth.c
 
 ## Publishing
 
-Create pages in the root directory and blog articles in the __\_posts/__ directory. Add images and media to the __assets/__ directory. Pages and blog articles pages should be written in markdown. The new content can be tested and developed using a local server on port 4000:
+Create non blog pages in the root directory. Work on draft blog articles in __\_drafts/__ so they won't be published by GitHub Pages until they are ready. Move drafts into __\_posts/__ and prefix with the filename with the date for publication.
+
+Add images and media to the __assets/__ directory. Pages and blog articles pages should be written in markdown. The new content can be tested and developed using a local server on port 4000:
 
     $ bundle exec jekyll serve
+    $ bundle exec jekyll serve --drafts # To test publish draft articles
 
 GitHub Pages does not support the Jekyll Archives plugin, so we need to save the generated tag archive index pages:
 
