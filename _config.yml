@@ -11,10 +11,11 @@
 locale: "en-GB"
 title: "Mat Booth"
 subtitle: "Eclipse Services"
-name: &name "Mat Booth"
-description: >- # this means to ignore newlines until "baseurl:"
-  Mat Booth provides support, consulting and implementation services for
-  Eclipse plug-ins, Eclipse RCP applications and OSGi-based products.
+name: "Mat Booth Ltd"
+description: &tagline >-
+  Mat Booth is a software engineer providing support, consulting and
+  implementation services for Eclipse plug-ins, Eclipse RCP applications
+  and OSGi-based products.
 url: "https://matbooth.co.uk"
 twitter_username: FOSS_mbooth
 github_username:  mbooth101
@@ -46,8 +47,14 @@ jekyll-archives:
     year: year-archive
     tag: tag-archive
 
-# Blog Post Defaults
+# Page and Blog Post Defaults
 defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      tagline: *tagline
   - scope:
       path: ""
       type: posts
@@ -60,11 +67,11 @@ defaults:
 
 # Site Author
 author:
-  name: *name
+  name: "Mat Booth"
   avatar: "/assets/images/hackergotchi-mbooth.png"
   bio: "Professional ones and zeroes plumber and open source advocate. Amateur DIY and tool enthusiast."
   location: "Sheffield, UK"
-  email: "mat@matbooth.co.uk"
+  email: "info@matbooth.co.uk"
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
@@ -84,7 +91,7 @@ footer:
       url: "https://github.com/mbooth101"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:mat@matbooth.co.uk"
+      url: "mailto:info@matbooth.co.uk"
 
 # Plug-ins
 whitelist: []
@@ -95,6 +102,11 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
 
 # Serving
 detach: false

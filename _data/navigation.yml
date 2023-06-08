@@ -3,3 +3,5 @@ main:
     url: /projects/
   - title: "Blog-O-Matic"
     url: /blog/
+  - title: "Contact"
+    url: /contact/
