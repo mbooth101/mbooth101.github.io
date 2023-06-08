@@ -1,6 +1,8 @@
 ---
 layout: default
 author_profile: true
+read_time: true
+show_date: true
 ---
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -22,9 +24,12 @@ author_profile: true
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 id="page-title" class="page__title">Posts from {{ page.date | date: "%Y" }}</h1>
     {% endunless %}
-    {% for post in page.posts %}
-      {% include archive-single.html %}
-    {% endfor %}
+    {% assign entries_layout = page.entries_layout | default: 'list' %}
+    <div class="entries-{{ entries_layout }}">
+      {% for post in page.posts %}
+        {% include archive-single.html type=entries_layout %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
