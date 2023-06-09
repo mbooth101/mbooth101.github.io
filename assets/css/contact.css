@@ -1,0 +1,15 @@
+/* Make the contact icons look alright on mobile */
+
+@media (min-width: 64em) {
+	#main .sidebar img {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (max-width: 64em) {
+	#main .sidebar img {
+		width: 25%;
+	}
+}
+

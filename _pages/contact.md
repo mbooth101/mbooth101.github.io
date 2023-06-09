@@ -8,6 +8,7 @@ sidebar:
     image_alt: "Contact by phone icon"
   - image: "/assets/images/contact_address.png"
     image_alt: "Contact by post icon"
+style: contact
 ---
 
 Mat Booth may be contacted directly by phone or email during UK business hours:
