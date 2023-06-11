@@ -18,9 +18,7 @@ Add images and media to the __assets/__ directory. Pages and blog articles pages
     $ bundle exec jekyll serve
     $ bundle exec jekyll serve --drafts # To test publish draft articles
 
-GitHub Pages does not support the Jekyll Archives plugin, so we need to save the generated tag archive index pages:
-
-    $ cp -pr _site/blog/*/ blog
+GitHub Pages does not support the Jekyll Archives plugin, so if an article is given a brand new tag that has not been used before, a new tag page should be added to the __\_pages/tags/__ directory.
 
 Commit everything when done:
 

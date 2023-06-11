@@ -32,21 +32,6 @@ feed:
   tags:
     path: "/blog/feeds/"
 
-# Blog Archives
-tag_archive:
-  type: jekyll-archives
-  path: "/blog/"
-jekyll-archives:
-  enabled:
-    - year
-    - tags
-  permalinks:
-    year: '/blog/:year/'
-    tag: '/blog/:name/'
-  layouts:
-    year: year-archive
-    tag: tag-archive
-
 # Page and Blog Post Defaults
 defaults:
   - scope:
@@ -97,7 +82,6 @@ footer:
 # Plug-ins
 whitelist: []
 plugins:
-  - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
