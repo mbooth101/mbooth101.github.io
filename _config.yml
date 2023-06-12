@@ -11,6 +11,7 @@
 locale: "en-GB"
 title: "Mat Booth"
 subtitle: "Eclipse Services"
+logo: "/assets/images/logo.png"
 name: "Mat Booth Ltd"
 description: &tagline >-
   Mat Booth is a software engineer providing support, consulting and

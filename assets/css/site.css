@@ -1,0 +1,11 @@
+/* Site-wide styles */
+
+/* Increase the site title and subtitle contrast */
+.greedy-nav a.site-title {
+	color: #3d4144;
+}
+
+/* Disable side-bar opacity */
+#main .sidebar {
+	opacity: 1;
+}
