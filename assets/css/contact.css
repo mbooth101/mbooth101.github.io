@@ -10,6 +10,9 @@
 @media (max-width: 64em) {
 	#main .sidebar img {
 		width: 25%;
+		max-width: 100px;
+		margin-left: 0;
+		margin-right: 1em;
 	}
 }
 

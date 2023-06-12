@@ -6,4 +6,11 @@ header:
   overlay_image: /assets/images/header_eclipse.jpg
   cta_url: /contact/
   cta_label: "Contact Me"
+feature_row:
+  - title: IDE Tools
+  - title: RCP Applications
+  - title: Open Source
 ---
+
+{% include feature_row %}
+
