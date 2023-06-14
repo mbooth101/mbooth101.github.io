@@ -7,9 +7,18 @@ header:
   cta_url: /contact/
   cta_label: "Contact Me"
 feature_row:
-  - title: IDE Tools
-  - title: RCP Applications
-  - title: Open Source
+  - title: "IDE Tools"
+    excerpt: "Bespoke IDE plug-ins to integrate with your tools and frameworks."
+    image_path: /assets/images/home_ide.jpg
+    alt: "Screenshot of the Eclipse IDE"
+  - title: "RCP Applications"
+    excerpt: "Standalone desktop applications based on the Eclipse platform."
+    image_path: /assets/images/home_rcp.jpg
+    alt: "Screenshot of an RCP application"
+  - title: "Open Source"
+    excerpt: "Expertise with the open source development model."
+    image_path: /assets/images/home_foss.jpg
+    alt: "Screenshot of a pull request"
 ---
 
 {% include feature_row %}
