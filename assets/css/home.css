@@ -1,0 +1,17 @@
+/* Float the images on the home page to flow the text around the illustrations */
+
+.service_image {
+	border-radius: 10px;
+}
+
+@media (min-width: 64em) {
+	.service_image {
+		float: right;
+		margin-left: 1em;
+		max-width: 450px;
+	}
+}
+@media (max-width: 64em) {
+	.service_image {
+	}
+}
