@@ -1,6 +1,6 @@
 # Website Source
 
-This repository contains the source files for publishing the [https://matbooth.co.uk](matbooth.co.uk) site using the [https://jekyllrb.com/](Jekyll) static site generator tool and GitHub Pages.
+This repository contains the source files for publishing the [matbooth.co.uk](https://matbooth.co.uk) site using the [Jekyll](https://jekyllrb.com) static site generator tool and GitHub Pages.
 
 ## Initial Setup on Fedora
 
