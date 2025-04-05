@@ -31,7 +31,7 @@ style: home
 
 ![Screenshot of the Eclipse IDE](/assets/images/home_ide.jpg){: .service_image}
 
-Good tooling is essential for make software engineers efficient at their jobs. Properly integrated tooling is even better. Adding IDE support for your domain specific language, framework or tools and debuggers can greatly improve the development workflow for your engineers and your customer's engineers.
+Good tooling is essential for making software engineers efficient at their jobs. Properly integrated tooling is even better. Adding IDE support for your domain specific language, framework or tools and debuggers can greatly improve the development workflow for your engineers and your customer's engineers.
 
 Get users up and running quickly by adding simplified project creation wizards; make it easier to debug and run projects by adding customised debugger and external tool support; give the IDE a deep comprehension of your projects allowing detailed code analysis and advanced refactoring. These are just some of the integrations that can be made with the development of bespoke plug-ins for the Eclipse IDE.
 
