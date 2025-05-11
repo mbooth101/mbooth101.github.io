@@ -54,15 +54,12 @@ defaults:
 # Site Author
 author:
   name: "Mat Booth"
-  avatar: "/assets/images/hackergotchi-mbooth.png"
+  avatar: "/assets/images/hackergotchi-mbooth-wedding.jpg"
   bio: "Professional ones and zeroes plumber and open source advocate. Amateur DIY and tool enthusiast."
   location: "Sheffield, UK"
   email: "&#x69;&#x6e;&#x66;&#x6f;&#x40;&#x6d;&#x61;&#x74;&#x62;&#x6f;&#x6f;&#x74;&#x68;&#x2e;&#x63;&#x6f;&#x2e;&#x75;&#x6b;"
   phone: "&#x2b;&#x34;&#x34;&#x37;&#x38;&#x31;&#x37;&#x37;&#x34;&#x37;&#x36;&#x36;&#x34;"
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/FOSS_mbooth"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mbooth101"
@@ -70,9 +67,6 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/FOSS_mbooth"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mbooth101"
