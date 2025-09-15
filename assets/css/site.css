@@ -9,3 +9,8 @@
 #main .sidebar {
 	opacity: 1;
 }
+
+/* Make better use of horizontal screen space */
+#main {
+	max-width: 1440px;
+}
