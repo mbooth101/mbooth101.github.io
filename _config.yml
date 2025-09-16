@@ -9,6 +9,7 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 locale: "en-GB"
+timezone: "Europe/London"
 title: "Mat Booth"
 subtitle: "Eclipse Services"
 logo: "/assets/images/logo.png"
