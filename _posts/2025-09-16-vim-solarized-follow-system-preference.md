@@ -1,6 +1,6 @@
 ---
 title: Configuring Vim Solarized to Follow the System Dark Mode Preference
-date: 2025-09-16 15:00
+date: 2025-09-16 11:00
 tags: linux bash
 ---
 
