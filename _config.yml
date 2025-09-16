@@ -77,11 +77,20 @@ footer:
 # Plug-ins
 whitelist: []
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
+  - jekyll-archives
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-relative-links
+  - jekyll-sitemap
+
+jekyll-archives:
+  enabled: ["tags", "year"]
+  permalinks:
+    tag: "/blog/:name/"
+    year: "/blog/:year/"
+  layouts:
+    tag: tag-archive
+    year: year-archive
 
 # Reading Files
 include:
