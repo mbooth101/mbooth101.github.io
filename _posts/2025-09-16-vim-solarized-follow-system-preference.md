@@ -6,7 +6,7 @@ tags: linux bash
 
 I like to switch my system between light and dark modes as lighting conditions change, and I want my terminal windows to always respect my current system preference. This article shows how to configure vim to automatically change between light and dark variants of the Solarized colour scheme, to match the current system dark mode preference.
 
-<video width="100%" autoplay loop muted>
+<video width="100%" autoplay loop muted controls>
   <source src="/assets/video/vim_working.webm" type="video/webm" />
 </video>
 
@@ -52,7 +52,7 @@ New vim sessions will now use the correct colours, and are even able to detect w
 
 However, vim is ***only*** able to detect whether to use the light or dark variant ***at start up.*** This means if I switch the system dark mode preference while vim is open, then I have to close and reopen all my open vim sessions before they will use the correct Solarized variant:
 
-<video width="100%" autoplay loop muted>
+<video width="100%" autoplay loop muted controls>
   <source src="/assets/video/vim_not_working.webm" type="video/webm" />
 </video>
 
@@ -143,6 +143,6 @@ $ systemctl --user start theme-sync.service
 
 Now we can switch between light and dark modes to our heart's content, safe in the knowledge that vim will follow suite. 😌
 
-<video width="100%" autoplay loop muted>
+<video width="100%" autoplay loop muted controls>
   <source src="/assets/video/vim_working.webm" type="video/webm" />
 </video>
