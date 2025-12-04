@@ -14,3 +14,8 @@
 #main {
 	max-width: 1440px;
 }
+
+/* Add missing styles for videos */
+video {
+	max-width: 100%;
+}

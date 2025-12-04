@@ -22,8 +22,8 @@ url: "https://matbooth.co.uk"
 github_username:  mbooth101
 
 # Themes
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
-minimal_mistakes_skin: "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+theme: "minimal-mistakes-jekyll"
+minimal_mistakes_skin: "default"
 
 # RSS Feeds
 atom_feed:
