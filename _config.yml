@@ -20,6 +20,7 @@ description: &tagline >-
   and OSGi-based products.
 url: "https://matbooth.co.uk"
 github_username:  mbooth101
+breadcrumbs: true
 
 # Themes
 theme: "minimal-mistakes-jekyll"
@@ -96,6 +97,8 @@ jekyll-archives:
 include:
   - .htaccess
   - _pages
+exclude:
+  - to_webm.sh
 
 # Serving
 detach: false
